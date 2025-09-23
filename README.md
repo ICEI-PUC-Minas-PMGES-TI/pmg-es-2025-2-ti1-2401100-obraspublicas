@@ -69,6 +69,42 @@ Empresas e órgãos públicos responsáveis pelas obras, que terão um canal mod
 | --------- | --------- |
 | ![Persona5]() | ![Persona6]() |
 
+### Prototipo de telas
+
+#### Home-page 1
+![HomePage](docs/images/HP1.png)
+#### Home-page 2
+![HomePage2](docs/images/HP2.png)
+#### Home-page 3
+![HomePage2](docs/images/HP3.png)
+
+#### Tela de Login
+![HomePage2](docs/images/LoginCidadao.png)
+
+#### Tela Cadastro de cidadão
+![HomePage2](docs/images/CadastroCidadao.png)
+
+#### Tela Cadastro de Construtora
+![HomePage2](docs/images/CadastroContrutora.png)
+
+#### Tela Principal Cidadão
+![HomePage2](docs/images/PrincipalCidadao.png)
+
+#### Tela Principal Contrutora
+![HomePage2](docs/images/PrincipalConstrutora.png)
+
+#### Tela Principal com obra selecionada
+![HomePage2](docs/images/PrincipalObraAberta.png)
+
+#### Tela de cidadão comentando
+![HomePage2](docs/images/ComentandoObra.png)
+
+#### Tela de Publicação de obra
+![HomePage2](docs/images/NovaObra.png)
+
+#### Tela de atualização de obra
+![HomePage2](docs/images/AtualizarObra.png)
+
 ## Instruções de utilização 
 
 > **IMPORTANTE: APAGUE ESSA SEÇÃO DE INSTRUÇÕES ANTES DE ENTREGAR SEU TRABALHO**
