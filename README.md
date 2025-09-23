@@ -1,18 +1,24 @@
-# Nome do projeto
+# Obra Prima
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O projeto tem como objetivo criar uma plataforma digital que centralize informações sobre obras públicas em Belo Horizonte, reunindo dados como prazos, custos, status de execução e responsáveis. A ideia é transformar informações que hoje são dispersas e burocráticas em algo acessível, transparente e fácil de entender pela população.
+
+Além de informar, a plataforma busca aproximar moradores e gestores públicos, permitindo acompanhamento em tempo real e espaço para denúncias ou relatos de quem é diretamente impactado. Assim, promove-se maior transparência, fortalece-se o controle social e contribui-se para que as obras avancem de forma mais eficiente e organizada.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Cezar Augusto Azevedo Nunes
+* Esdras Manassés Borges de Oliveira
+* Guilherme Augusto Martins de Carvalho
+* Gustavo Henrique de Lima
+* João Victor Vial Leite Soares
+* Lucas Damacena de Souza
+
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Lucca Soares de Paiva Lacerda
+* Daniel Machado Osório Pereira
+* Michelle Hanne Soares de Andrade
 
 # Contexto
 
@@ -25,12 +31,7 @@ Atualmente, a má gestão de obras públicas e a pouca ou nenhuma transparência
 
 ## Objetivos
 
--A finalidade do projeto é desenvolver uma aplicação web que funcione de maneira similar a uma rede social, dedicada exclusivamente ao acompanhamento de obras públicas.
--Permitir que empresas e órgãos responsáveis cadastrem e publiquem informações detalhadas sobre as obras.
--Oferecer à população a possibilidade de acompanhar prazos, custos e etapas do andamento das construções.
--Criar um espaço interativo em que cidadãos possam comentar, avaliar e expressar suas opiniões sobre as obras em execução.
--Promover maior transparência e engajamento social, fortalecendo a relação entre gestores e comunidade.
--Auxiliar na fiscalização coletiva e na cobrança por melhores práticas na gestão de recursos públicos.
+A finalidade do projeto é desenvolver uma aplicação web que funcione de maneira similar a uma rede social, dedicada exclusivamente ao acompanhamento de obras públicas. Permitir que empresas e órgãos responsáveis cadastrem e publiquem informações detalhadas sobre as obras. Oferecer à população a possibilidade de acompanhar prazos, custos e etapas do andamento das construções. Criar um espaço interativo em que cidadãos possam comentar, avaliar e expressar suas opiniões sobre as obras em execução. Promover maior transparência e engajamento social, fortalecendo a relação entre gestores e comunidade. Auxiliar na fiscalização coletiva e na cobrança por melhores práticas na gestão de recursos públicos.
 
 ## Justificativa
 
