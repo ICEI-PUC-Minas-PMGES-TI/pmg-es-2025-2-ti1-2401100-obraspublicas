@@ -60,15 +60,15 @@ Empresas e órgãos públicos responsáveis pelas obras, que terão um canal mod
 
 | Persona 1 | Persona 2 |
 | ------- | ------- |
-| ![Persona1](docs/images/persona1) | ![Persona2](docs/images/persona2) |
+| ![Persona1](docs/images/persona%201.jpeg) | ![Persona2](docs/images/persona%202.jpeg) |
 
 | Persona 3 | Persona 4 |
 | --------- | --------- |
-| ![Persona3](docs/images/persona3) | ![Persona4](docs/images/persona4) |
+| ![Persona3](docs/images/persona%203.jpeg) | ![Persona4](docs/images/persona%204.jpeg) |
 
 | Persona 5 | Persona 6 |
 | --------- | --------- |
-| ![Persona5](docs/images/persona5) | ![Persona6](docs/images/persona6) |
+| ![Persona5](docs/images/persona%205.jpeg) | ![Persona6](docs/images/persona%206.jpeg) |
 
 ### Prototipo de telas
 
