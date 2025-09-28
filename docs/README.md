@@ -81,19 +81,15 @@ Nesse momento, vamos transformar os insights e validações obtidos em soluçõe
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-| EU COMO...`PERSONA` | QUERO/PRECISO ...`FUNCIONALIDADE`      | PARA ...`MOTIVO/VALOR`                 |
-| ------------------- | -------------------------------------- | -------------------------------------- |
-| Usuário do sistema  | Registrar minhas tarefas ⚠️ EXEMPLO ⚠️ | Não esquecer de fazê-las               |
-| Administrador       | Alterar permissões ⚠️ EXEMPLO ⚠️       | Permitir que possam administrar contas |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão das necessidades de cada persona. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
->
-> **Orientações**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
+| EU COMO...`PERSONA`              | QUERO/PRECISO ...`FUNCIONALIDADE`                                               | PARA ...`MOTIVO/VALOR`                                                                                 |
+| -------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Usuário do sistema               | Lista de todas as obras em andamento, com informações básicas                   | Acompanhar de forma prática o que está sendo feito e cobrar melhorias quando necessário.               |
+| Estudante                        | Acessar informações detalhadas de uma obra                                      | Usar os dados como referência em trabalhos acadêmicos e compreender como os projetos são estruturados. |
+| Gestor de obras                  | Cadastrar uma nova obra no sistema incluindo informações completas              | Garantir que os dados oficiais estejam acessíveis à população.                                         |
+| Morador de bairro afetado        | Preciso filtrar por localização, tipo de serviço e status                       | Acompanhar apenas as que impactam diretamente minha região.                                            |
+| Jornalista                       | Baixar imagens oficiais e documentos em PDF                                     | Divulgar informações verificadas e confiáveis em reportagens.                                          |
+| ONG que monitora gastos públicos | Consultar um histórico de obras concluídas, com valores orçados e gastos finais | Avaliar se houve compatibilidade entre planejamento e execução.                                        |
+| Liderança comunitária            | Registrar comentários e observações sobre o andamento das obras do meu bairro   | Levar ao conhecimento dos gestores os problemas enfrentados pela população local.                      |
 
 ## Proposta de Valor
 
