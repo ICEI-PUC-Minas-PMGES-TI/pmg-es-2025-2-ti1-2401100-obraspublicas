@@ -64,17 +64,17 @@ Empresas e órgãos públicos responsáveis pelas obras, que terão um canal mod
 
 ### Personas
 
-| Persona 1                                 | Persona 2                                 |
-| ----------------------------------------- | ----------------------------------------- |
-| ![Persona1](docs/images/persona%201.jpeg) | ![Persona2](docs/images/persona%202.jpeg) |
+| Persona 1                            | Persona 2                            |
+| ------------------------------------ | ------------------------------------ |
+| ![Persona1](images/persona%201.jpeg) | ![Persona2](images/persona%202.jpeg) |
 
-| Persona 3                                 | Persona 4                                 |
-| ----------------------------------------- | ----------------------------------------- |
-| ![Persona3](docs/images/persona%203.jpeg) | ![Persona4](docs/images/persona%204.jpeg) |
+| Persona 3                            | Persona 4                            |
+| ------------------------------------ | ------------------------------------ |
+| ![Persona3](images/persona%203.jpeg) | ![Persona4](images/persona%204.jpeg) |
 
-| Persona 5                                 | Persona 6                                 |
-| ----------------------------------------- | ----------------------------------------- |
-| ![Persona5](docs/images/persona%205.jpeg) | ![Persona6](docs/images/persona%206.jpeg) |
+| Persona 5                            | Persona 6                            |
+| ------------------------------------ | ------------------------------------ |
+| ![Persona5](images/persona%205.jpeg) | ![Persona6](images/persona%206.jpeg) |
 
 # Product Design
 
@@ -143,43 +143,43 @@ Estes são os protótipos de telas do sistema.
 
 #### Home-page
 
-![HomePage2](docs/images/HP3.png)
+![HomePage2](images/HP3.png)
 
 #### Tela de Login
 
-![HomePage2](docs/images/LoginCidadao.png)
+![HomePage2](images/LoginCidadao.png)
 
 #### Tela Cadastro de cidadão
 
-![HomePage2](docs/images/CadastroCidadao.png)
+![HomePage2](images/CadastroCidadao.png)
 
 #### Tela Cadastro de Construtora
 
-![HomePage2](docs/images/CadastroContrutora.png)
+![HomePage2](images/CadastroContrutora.png)
 
 #### Tela Principal Cidadão
 
-![HomePage2](docs/images/PrincipalCidadao.png)
+![HomePage2](images/PrincipalCidadao.png)
 
 #### Tela Principal Contrutora
 
-![HomePage2](docs/images/PrincipalConstrutora.png)
+![HomePage2](images/PrincipalConstrutora.png)
 
 #### Tela Principal com obra selecionada
 
-![HomePage2](docs/images/PrincipalObraAberta.png)
+![HomePage2](images/PrincipalObraAberta.png)
 
 #### Tela de cidadão comentando
 
-![HomePage2](docs/images/ComentandoObra.png)
+![HomePage2](images/ComentandoObra.png)
 
 #### Tela de Publicação de obra
 
-![HomePage2](docs/images/NovaObra.png)
+![HomePage2](images/NovaObra.png)
 
 #### Tela de atualização de obra
 
-![HomePage2](docs/images/AtualizarObra.png)
+![HomePage2](images/AtualizarObra.png)
 
 ### User Flow
 
