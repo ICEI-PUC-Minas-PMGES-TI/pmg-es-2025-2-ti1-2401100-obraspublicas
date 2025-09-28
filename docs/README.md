@@ -6,9 +6,12 @@ Informações básicas do projeto.
 - **Repositório GitHub:** [\[LINK PARA O REPOSITÓRIO NO GITHUB\]](https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-obraspublicas.git)
 - **Membros da equipe:**
 
-  - [Fulano](https://github.com/fulano) ⚠️ EXEMPLO ⚠️
-  - [Beltrano](https://github.com/beltrano) ⚠️ EXEMPLO ⚠️
-  - [Cicrano](https://github.com/cicrano) ⚠️ EXEMPLO ⚠️
+  - [Gustavo Henrique de Lima](https://github.com/Gustavo21hl)
+  - [Cezar Augusto Azevedo Nunes](https://github.com/czzareal)
+  - [João Victor Vial Leite Soares](https://github.com/jvvls)
+  - [Esdras Manassés Borges de Oliveira](https://github.com/)
+  - [Guilherme Augusto Martins de Carvalho](https://github.com/)
+  - [Lucas Damacena de Souza](https://github.com/)
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -200,17 +203,10 @@ Detalhes sobre a organização do grupo e o ferramental empregado.
 
 Relação de ferramentas empregadas pelo grupo durante o projeto.
 
-| Ambiente                    | Plataforma | Link de acesso                                |
-| --------------------------- | ---------- | --------------------------------------------- |
-| Processo de Design Thinking | Miro       | https://miro.com/XXXXXXX ⚠️ EXEMPLO ⚠️        |
-| Repositório de código       | GitHub     | https://github.com/XXXXXXX ⚠️ EXEMPLO ⚠️      |
-| Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
-| Protótipo Interativo        | MarvelApp  | https://marvelapp.com/XXXXXXX ⚠️ EXEMPLO ⚠️   |
-|                             |            |                                               |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
+| Ambiente                    | Plataforma | Link de acesso                                                                         |
+| --------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVJSv4Y9k=/                                               |
+| Repositório de código       | GitHub     | https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti1-2401100-obraspublicas.git |
 
 ## Gerenciamento do Projeto
 
