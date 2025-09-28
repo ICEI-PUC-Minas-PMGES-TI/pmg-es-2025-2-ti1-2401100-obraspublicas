@@ -134,22 +134,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RNF-003 | O sistema deve carregar a página principal com a lista de obras em até 5 segundos em uma conexão banda larga comum. | MÉDIA      |
 | RNF-004 | Os dados de autenticação dos usuários devem ser armazenados de forma criptografada.                                 | MÉDIA      |
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Os requisitos de um projeto são classificados em dois grupos:
->
-> - [Requisitos Funcionais (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na plataforma (ex: cadastro de usuário).
-> - [Requisitos Não Funcionais (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança ou outro (ex: suporte a dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma característica alvo da sua solução. Além disso, certifique-se de que todos os aspectos capturados nas Histórias de Usuário foram cobertos.
->
-> **Orientações**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
 ## Projeto de Interface
 
 Artefatos relacionados com a interface e a interacão do usuário na proposta de solução.
@@ -158,40 +142,49 @@ Artefatos relacionados com a interface e a interacão do usuário na proposta de
 
 Estes são os protótipos de telas do sistema.
 
-**✳️✳️✳️ COLOQUE AQUI OS PROTÓTIPOS DE TELAS COM TÍTULO E DESCRIÇÃO ✳️✳️✳️**
+#### Home-page
 
-##### TELA XPTO ⚠️ EXEMPLO ⚠️
+![HomePage2](docs/images/HP3.png)
 
-Descrição para a tela XPTO
+#### Tela de Login
 
-![Exemplo de wireframe](images/exemplo-wireframe.png)
+![HomePage2](docs/images/LoginCidadao.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface.
->
-> **Orientações**:
->
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+#### Tela Cadastro de cidadão
+
+![HomePage2](docs/images/CadastroCidadao.png)
+
+#### Tela Cadastro de Construtora
+
+![HomePage2](docs/images/CadastroContrutora.png)
+
+#### Tela Principal Cidadão
+
+![HomePage2](docs/images/PrincipalCidadao.png)
+
+#### Tela Principal Contrutora
+
+![HomePage2](docs/images/PrincipalConstrutora.png)
+
+#### Tela Principal com obra selecionada
+
+![HomePage2](docs/images/PrincipalObraAberta.png)
+
+#### Tela de cidadão comentando
+
+![HomePage2](docs/images/ComentandoObra.png)
+
+#### Tela de Publicação de obra
+
+![HomePage2](docs/images/NovaObra.png)
+
+#### Tela de atualização de obra
+
+![HomePage2](docs/images/AtualizarObra.png)
 
 ### User Flow
 
-**✳️✳️✳️ COLOQUE AQUI O DIAGRAMA DE FLUXO DE TELAS ✳️✳️✳️**
-
-![Exemplo de fluxo de telas](images/exemplo-userflow.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
->
-> **Orientações**:
->
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-> - [Top 25 User Flow Tools &amp; Templates for Smooth](https://www.mockplus.com/blog/post/user-flow-tools)
+![Fluxo de Telas](images/fluxo%20de%20telas.png)
 
 ### Protótipo Interativo
 
