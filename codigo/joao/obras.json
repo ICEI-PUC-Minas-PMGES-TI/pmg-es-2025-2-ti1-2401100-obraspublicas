@@ -1,0 +1,247 @@
+{
+  "publicacoesObras": [
+    {
+      "id": 1,
+      "titulo": "Reforma da Praça Central",
+      "bairro": "Centro",
+      "construtora": "Construtora Exemplo LTDA",
+      "status": "Em andamento",
+      "imagem": "/codigo/joao/img/obra.png",
+      "valorTotal": 2500000
+    },
+    {
+      "id": 2,
+      "titulo": "Construção do Centro de Saúde Barreiro",
+      "bairro": "Barreiro",
+      "construtora": "Construtora X",
+      "status": "Paralisada",
+      "imagem": "/codigo/joao/img/logo3.png",
+
+      "valorTotal": 3200000
+    },
+    {
+      "id": 3,
+      "titulo": "Pavimentação da Rua das Flores",
+      "bairro": "Savassi",
+      "construtora": "Construtora Y",
+      "status": "Concluída",
+      "valorTotal": 780000
+    },
+    {
+      "id": 4,
+      "titulo": "Construção da Escola Municipal Esperança",
+      "bairro": "Venda Nova",
+      "construtora": "Construtora Z",
+      "status": "Em andamento",
+      "valorTotal": 4100000
+    },
+    {
+      "id": 5,
+      "titulo": "Revitalização do Viaduto Santa Tereza",
+      "bairro": "Centro",
+      "construtora": "Construtora Delta",
+      "status": "Paralisada",
+      "valorTotal": 6200000
+    },
+    {
+      "id": 6,
+      "titulo": "Ampliação do Hospital Regional Norte",
+      "bairro": "Pampulha",
+      "construtora": "Construtora Minas",
+      "status": "Em andamento",
+      "valorTotal": 8900000
+    },
+    {
+      "id": 7,
+      "titulo": "Reforma do Mercado Distrital",
+      "bairro": "Barreiro",
+      "construtora": "Construtora Horizonte",
+      "status": "Concluída",
+      "valorTotal": 1950000
+    },
+    {
+      "id": 8,
+      "titulo": "Construção da Creche Jardim das Rosas",
+      "bairro": "Nova Lima",
+      "construtora": "Construmax Engenharia",
+      "status": "Em andamento",
+      "valorTotal": 2100000
+    },
+    {
+      "id": 9,
+      "titulo": "Recapeamento da Avenida dos Andradas",
+      "bairro": "Centro",
+      "construtora": "Construtora Delta",
+      "status": "Concluída",
+      "valorTotal": 3100000
+    },
+    {
+      "id": 10,
+      "titulo": "Construção da UPA Savassi",
+      "bairro": "Savassi",
+      "construtora": "Construtora Minas",
+      "status": "Em andamento",
+      "valorTotal": 5600000
+    },
+    {
+      "id": 11,
+      "titulo": "Requalificação da Lagoa da Pampulha",
+      "bairro": "Pampulha",
+      "construtora": "Construtora Y",
+      "status": "Paralisada",
+      "valorTotal": 7200000
+    },
+    {
+      "id": 12,
+      "titulo": "Construção da Praça da Juventude",
+      "bairro": "Venda Nova",
+      "construtora": "Construtora Horizonte",
+      "status": "Concluída",
+      "valorTotal": 1200000
+    },
+    {
+      "id": 13,
+      "titulo": "Reforma do Teatro Municipal",
+      "bairro": "Centro",
+      "construtora": "Construtora X",
+      "status": "Em andamento",
+      "valorTotal": 4600000
+    },
+    {
+      "id": 14,
+      "titulo": "Construção do Viaduto Oeste",
+      "bairro": "Nova Suíça",
+      "construtora": "Construtora Z",
+      "status": "Paralisada",
+      "valorTotal": 9700000
+    },
+    {
+      "id": 15,
+      "titulo": "Urbanização do Bairro São Gabriel",
+      "bairro": "São Gabriel",
+      "construtora": "Construmax Engenharia",
+      "status": "Em andamento",
+      "valorTotal": 5400000
+    },
+    {
+      "id": 16,
+      "titulo": "Reforma da Biblioteca Municipal",
+      "bairro": "Centro",
+      "construtora": "Construtora Alpha",
+      "status": "Concluída",
+      "valorTotal": 1800000
+    },
+    {
+      "id": 17,
+      "titulo": "Pavimentação da Rua do Comércio",
+      "bairro": "Barreiro",
+      "construtora": "Construtora Beta",
+      "status": "Em andamento",
+      "valorTotal": 950000
+    },
+    {
+      "id": 18,
+      "titulo": "Construção do Parque Ecológico",
+      "bairro": "Pampulha",
+      "construtora": "Construtora Gamma",
+      "status": "Paralisada",
+      "valorTotal": 4700000
+    },
+    {
+      "id": 19,
+      "titulo": "Reforma do Ginásio Poliesportivo",
+      "bairro": "Savassi",
+      "construtora": "Construtora Delta",
+      "status": "Em andamento",
+      "valorTotal": 2800000
+    },
+    {
+      "id": 20,
+      "titulo": "Ampliação do Hospital Municipal",
+      "bairro": "Nova Suíça",
+      "construtora": "Construmax Engenharia",
+      "status": "Concluída",
+      "valorTotal": 8300000
+    },
+    {
+      "id": 21,
+      "titulo": "Construção da Escola de Música",
+      "bairro": "São Gabriel",
+      "construtora": "Construtora Y",
+      "status": "Em andamento",
+      "valorTotal": 2500000
+    },
+    {
+      "id": 22,
+      "titulo": "Revitalização da Praça das Palmeiras",
+      "bairro": "Centro",
+      "construtora": "Construtora Z",
+      "status": "Paralisada",
+      "valorTotal": 1500000
+    },
+    {
+      "id": 23,
+      "titulo": "Construção da Unidade de Saúde Nova Lima",
+      "bairro": "Nova Lima",
+      "construtora": "Construtora Horizonte",
+      "status": "Em andamento",
+      "valorTotal": 3600000
+    },
+    {
+      "id": 24,
+      "titulo": "Recapeamento da Avenida Principal",
+      "bairro": "Barreiro",
+      "construtora": "Construtora Minas",
+      "status": "Concluída",
+      "valorTotal": 2700000
+    },
+    {
+      "id": 25,
+      "titulo": "Urbanização do Parque Industrial",
+      "bairro": "Venda Nova",
+      "construtora": "Construtora Alpha",
+      "status": "Em andamento",
+      "valorTotal": 5100000
+    },
+    {
+      "id": 26,
+      "titulo": "Reforma do Centro Cultural",
+      "bairro": "Savassi",
+      "construtora": "Construtora Beta",
+      "status": "Paralisada",
+      "valorTotal": 3300000
+    },
+    {
+      "id": 27,
+      "titulo": "Construção da Creche do Bairro Verde",
+      "bairro": "Pampulha",
+      "construtora": "Construtora Gamma",
+      "status": "Em andamento",
+      "valorTotal": 1950000
+    },
+    {
+      "id": 28,
+      "titulo": "Ampliação da Biblioteca Municipal",
+      "bairro": "Nova Suíça",
+      "construtora": "Construtora Delta",
+      "status": "Concluída",
+      "valorTotal": 2300000
+    },
+    {
+      "id": 29,
+      "titulo": "Revitalização do Parque Central",
+      "bairro": "Centro",
+      "construtora": "Construtora Y",
+      "status": "Em andamento",
+      "valorTotal": 4200000
+    },
+    {
+      "id": 30,
+      "titulo": "Construção do Centro Esportivo",
+      "bairro": "São Gabriel",
+      "construtora": "Construtora Z",
+      "status": "Paralisada",
+      "valorTotal": 6800000
+    }
+  ]
+}
