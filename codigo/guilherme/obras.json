@@ -1,0 +1,164 @@
+{
+  "obras": [
+    {
+      "id": "1",
+      "titulo": "Reforma da Praça Central",
+      "descricao": "Revitalização completa da praça com novo paisagismo, iluminação e acessibilidade.",
+      "valorContratado": 2500000,
+      "status": "Em andamento",
+      "dataInicio": "2025-08-01",
+      "previsaoTermino": "2025-12-15",
+      "orgaoResponsavel": "Prefeitura Municipal",
+      "empresaExecutora": "Construtora Exemplo LTDA",
+      "endereco": {
+        "logradouro": "Praça Central",
+        "numero": "100",
+        "bairro": "Centro",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "30100-000"
+      },
+      "anexos": [
+        {
+          "tipo": "imagem",
+          "nomeArquivo": "praca-antes.jpg",
+          "url": "https://exemplo.com/uploads/praca-antes.jpg"
+        },
+        {
+          "tipo": "documento",
+          "nomeArquivo": "contrato.pdf",
+          "url": "https://exemplo.com/uploads/contrato.pdf"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "titulo": "Construção da Unidade Básica de Saúde do Bairro Novo",
+      "descricao": "Obra destinada à construção de uma UBS com consultórios, farmácia e sala de vacinação.",
+      "valorContratado": 1800000,
+      "status": "Em andamento",
+      "dataInicio": "2025-07-10",
+      "previsaoTermino": "2026-01-20",
+      "orgaoResponsavel": "Secretaria Municipal de Saúde",
+      "empresaExecutora": "Saúde Engenharia Ltda",
+      "endereco": {
+        "logradouro": "Rua das Oliveiras",
+        "numero": "250",
+        "bairro": "Bairro Novo",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "30570-000"
+      },
+      "anexos": [
+        {
+          "tipo": "documento",
+          "nomeArquivo": "projeto-ubs.pdf",
+          "url": "https://exemplo.com/docs/projeto-ubs.pdf"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "titulo": "Revitalização do Parque Municipal das Águas",
+      "descricao": "Reforma de trilhas, instalação de novos bancos e iluminação LED.",
+      "valorContratado": 950000,
+      "status": "Concluída",
+      "dataInicio": "2024-03-01",
+      "previsaoTermino": "2024-08-15",
+      "orgaoResponsavel": "Secretaria de Meio Ambiente",
+      "empresaExecutora": "Verde & Vida Construções",
+      "endereco": {
+        "logradouro": "Avenida das Águas",
+        "numero": "1000",
+        "bairro": "Jardim das Fontes",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "30200-000"
+      },
+      "anexos": [
+        {
+          "tipo": "imagem",
+          "nomeArquivo": "parque-antes.jpg",
+          "url": "https://exemplo.com/imagens/parque-antes.jpg"
+        },
+        {
+          "tipo": "imagem",
+          "nomeArquivo": "parque-depois.jpg",
+          "url": "https://exemplo.com/imagens/parque-depois.jpg"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "titulo": "Duplicação da Avenida Central",
+      "descricao": "Obra de infraestrutura viária para melhorar o fluxo de veículos.",
+      "valorContratado": 3200000,
+      "status": "Planejada",
+      "dataInicio": "2026-02-01",
+      "previsaoTermino": "2026-11-30",
+      "orgaoResponsavel": "Departamento de Obras Públicas",
+      "empresaExecutora": "InfraSul Engenharia",
+      "endereco": {
+        "logradouro": "Avenida Central",
+        "numero": "0",
+        "bairro": "Centro",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "30100-000"
+      },
+      "anexos": []
+    },
+    {
+      "id": "5",
+      "titulo": "Construção da Escola Municipal Monte Azul",
+      "descricao": "Nova escola com 12 salas de aula, biblioteca e quadra poliesportiva.",
+      "valorContratado": 2700000,
+      "status": "Em andamento",
+      "dataInicio": "2025-09-01",
+      "previsaoTermino": "2026-06-30",
+      "orgaoResponsavel": "Secretaria Municipal de Educação",
+      "empresaExecutora": "Educar Engenharia",
+      "endereco": {
+        "logradouro": "Rua Monte Azul",
+        "numero": "45",
+        "bairro": "Monte Azul",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "30400-000"
+      },
+      "anexos": [
+        {
+          "tipo": "documento",
+          "nomeArquivo": "planta-escola.pdf",
+          "url": "https://exemplo.com/docs/planta-escola.pdf"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "titulo": "Reforma do Terminal Rodoviário Sul",
+      "descricao": "Modernização das plataformas, banheiros e sistema de informação ao usuário.",
+      "valorContratado": 2100000,
+      "status": "Paralisada",
+      "dataInicio": "2025-04-15",
+      "previsaoTermino": "2025-12-10",
+      "orgaoResponsavel": "Secretaria de Transportes",
+      "empresaExecutora": "Mobiliza Engenharia",
+      "endereco": {
+        "logradouro": "Rodovia BR-040",
+        "numero": "Km 12",
+        "bairro": "Rodoviária Sul",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "30300-000"
+      },
+      "anexos": [
+        {
+          "tipo": "documento",
+          "nomeArquivo": "relatorio-paralisacao.pdf",
+          "url": "https://exemplo.com/docs/relatorio-paralisacao.pdf"
+        }
+      ]
+    }
+  ]
+}
