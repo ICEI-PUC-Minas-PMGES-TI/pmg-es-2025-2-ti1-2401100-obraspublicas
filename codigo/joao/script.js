@@ -9,6 +9,10 @@ const nomeFilter = document.getElementById('nome');
 const clearFiltersBtn = document.getElementById('clearFilters');
 const obrasGrid = document.getElementById('obrasGrid');
 const debugBtn = document.querySelector('.debug');
+const API = "http://localhost:3000/obras";
+const userDropdownToggle = document.getElementById('userDropdownToggle');
+const userDropdown = document.getElementById('userDropdown');
+const toggleFontBtn = document.getElementById('toggleFont');
 
 let obrasData = [];
 let allBairros = [];
@@ -44,7 +48,7 @@ slider.addEventListener('input', () => {
 // === RENDERIZAÇÃO DE OBRAS ===
 function renderObras(obras) {
   obrasGrid.innerHTML = '';
-  if (obras.length === 0) {
+  if (!obras.length) {
     obrasGrid.innerHTML = '<p>Nenhuma obra encontrada.</p>';
     return;
   }
@@ -53,28 +57,27 @@ function renderObras(obras) {
     const card = document.createElement('div');
     card.classList.add('card');
 
-    const imgSrc = obra.imagem ? obra.imagem : 'img/Logo2.png';
+    const imgSrc = Array.isArray(obra.anexos)
+      ? (obra.anexos.find(a => a.tipo === "imagem")?.url || './img/Logo2.png')
+      : './img/Logo2.png';
 
     if (!debugMode) {
-      // --- modo normal ---
       card.innerHTML = `
-        <img src="${imgSrc}" alt="${obra.titulo}">
+        <img src="${imgSrc}" alt="obra" onerror="this.onerror=null; this.src='./img/Logo2.png'">
         <h3>${obra.titulo}</h3>
         <button>Ver detalhes</button>
       `;
     } else {
-      // --- modo debug legível ---
       card.classList.add('debug-card');
       card.innerHTML = `
-        <img src="${imgSrc}" alt="${obra.titulo}" class="debug-img">
         <h3>${obra.titulo}</h3>
         <table class="debug-table">
-          <tr><th>Bairro</th><td>${obra.bairro}</td></tr>
-          <tr><th>Construtora</th><td>${obra.construtora}</td></tr>
-          <tr><th>Status</th><td>${obra.status}</td></tr>
-          <tr><th>Valor Total</th><td>${formatCurrency(obra.valorTotal)}</td></tr>
+          <tr><th>Bairro</th><td>${obra.endereco?.bairro || ''}</td></tr>
+          <tr><th>Construtora</th><td>${obra.empresaExecutora || ''}</td></tr>
+          <tr><th>Status</th><td>${obra.status || ''}</td></tr>
+          <tr><th>Valor Total</th><td>${formatCurrency(obra.valorContratado || 0)}</td></tr>
           ${Object.keys(obra).map(key => {
-            if (['titulo','bairro','construtora','status','valorTotal','imagem'].includes(key)) return '';
+            if (['titulo','empresaExecutora','status','valorContratado','anexos','endereco'].includes(key)) return '';
             return `<tr><th>${key}</th><td>${obra[key]}</td></tr>`;
           }).join('')}
         </table>
@@ -95,7 +98,7 @@ function populateSelect(selectId, items) {
   todasOption.textContent = 'Todas';
   select.appendChild(todasOption);
 
-  Array.from(items).sort().forEach(item => {
+  Array.from(new Set(items.filter(Boolean))).sort().forEach(item => {
     const option = document.createElement('option');
     option.value = item;
     option.textContent = item;
@@ -118,16 +121,17 @@ function filterObras() {
 
   const filtered = obrasData.filter(obra => {
     const obraNome = normalize(obra.titulo);
-    const obraBairro = normalize(obra.bairro);
-    const obraConstrutora = normalize(obra.construtora);
+    const obraBairro = normalize(obra.endereco?.bairro);
+    const obraConstrutora = normalize(obra.empresaExecutora);
     const obraStatus = normalize(obra.status);
+    const obraValor = obra.valorContratado ?? 0;
 
     return (
       (nome === '' || obraNome.includes(nome)) &&
       (bairro === '' || obraBairro.includes(bairro)) &&
       (construtora === '' || obraConstrutora.includes(construtora)) &&
       (status === '' || obraStatus.includes(status)) &&
-      obra.valorTotal <= custoMax
+      obraValor <= custoMax
     );
   });
 
@@ -163,23 +167,51 @@ if (debugBtn) {
 }
 
 // === INIT ===
-function init() {
-  fetch('obras.json')
-    .then(res => res.json())
-    .then(data => {
-      obrasData = data.publicacoesObras;
+async function init() {
+  try {
+    const res = await fetch(API);
+    if (!res.ok) throw new Error('Erro na API');
+    const data = await res.json();
 
-      allBairros = [...new Set(obrasData.map(o => o.bairro))];
-      allConstrutoras = [...new Set(obrasData.map(o => o.construtora))];
-      allStatus = [...new Set(obrasData.map(o => o.status))];
+    console.log('Resposta da API:', data);
 
-      populateSelect('bairro', allBairros);
-      populateSelect('construtora', allConstrutoras);
-      populateSelect('status', allStatus);
+    // Garantir que obrasData seja array
+    obrasData = Array.isArray(data) ? data : [];
 
-      renderObras(obrasData);
-    })
-    .catch(err => console.error('Erro ao carregar obras:', err));
+    // Popular filtros
+    allBairros = obrasData.map(o => o.endereco?.bairro || '');
+    allConstrutoras = obrasData.map(o => o.empresaExecutora || '');
+    allStatus = obrasData.map(o => o.status || '');
+
+    populateSelect('bairro', allBairros);
+    populateSelect('construtora', allConstrutoras);
+    populateSelect('status', allStatus);
+
+    renderObras(obrasData);
+  } catch (err) {
+    console.error('Erro ao carregar obras:', err);
+  }
 }
 
 init();
+
+// === ACESSIBILIDADE: AUMENTAR FONTE ===
+userDropdownToggle.addEventListener('click', (e) => {
+  e.stopPropagation(); // evita fechar ao clicar dentro
+  userDropdown.style.display = userDropdown.style.display === 'flex' ? 'none' : 'flex';
+});
+
+// Fechar dropdown ao clicar fora
+document.addEventListener('click', () => {
+  userDropdown.style.display = 'none';
+});
+
+// Acessibilidade: aumentar/reduzir fonte
+if (localStorage.getItem('fontLarge') === 'true') {
+  document.body.classList.add('font-large');
+}
+
+toggleFontBtn.addEventListener('click', () => {
+  const isLarge = document.body.classList.toggle('font-large');
+  localStorage.setItem('fontLarge', isLarge);
+});

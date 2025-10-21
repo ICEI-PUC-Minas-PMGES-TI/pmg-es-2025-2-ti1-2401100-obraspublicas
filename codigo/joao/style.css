@@ -9,6 +9,85 @@
 }
 
 /* =========================
+   ACESSIBILIDADE - AUMENTAR FONTE
+========================= */
+
+/* Botão pequeno dentro do dropdown */
+.accessibility-btn-small {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-weight: bold;
+  font-size: 12px;
+  margin-left: 5px;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background-color 0.2s;
+}
+
+.accessibility-btn-small:hover {
+  background-color: #219150;
+}
+
+/* =========================
+   FONTE AMPLIADA
+========================= */
+body.font-large {
+  font-size: 1.3rem; /* aumenta texto base em 30% */
+}
+
+body.font-large h1,
+body.font-large h2,
+body.font-large h3,
+body.font-large p,
+body.font-large label,
+body.font-large button,
+body.font-large span {
+  font-size: 1.25em; /* aumenta proporcionalmente elementos importantes */
+}
+
+/* =========================
+   DROPDOWN USUÁRIO
+========================= */
+.user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 100;
+}
+
+.user-dropdown button {
+  background-color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.user-dropdown button:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* =========================
    TOPBAR
 ========================= */
 .topbar {
