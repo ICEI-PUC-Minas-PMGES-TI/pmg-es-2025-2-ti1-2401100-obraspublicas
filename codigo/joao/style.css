@@ -91,12 +91,18 @@ body.font-large span {
    TOPBAR
 ========================= */
 .topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
   background-color: #27ae60;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
+  z-index: 2000;
 }
 
 .logo {
@@ -164,11 +170,14 @@ body.font-large span {
 .container {
   display: flex;
   height: calc(100vh - 60px);
+  margin-top: 60px;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
 .sidebar {
   width: 220px;
+  height: 100%;
   background-color: #ededf0;
   padding: 20px;
   display: flex;
@@ -391,6 +400,59 @@ body.font-large span {
 }
 
 /* =========================
+   MAPA
+========================= */
+#map {
+  width: 100%;
+  height: calc(100vh - 60px); /* altura da tela menos header */
+  display: none;
+}
+
+.content.map-visible {
+  display: flex;
+  flex-direction: column;
+}
+.maps-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.maps-box img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.maps-box:hover {
+  background-color: #e0e0e0;
+}
+
+.maps-box span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* =========================
+   BOTÃO TOGGLE SIDEBAR
+========================= */
+#toggleSidebar {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* =========================
    RESPONSIVIDADE MOBILE
 ========================= */
 @media (max-width: 768px) {
@@ -400,6 +462,7 @@ body.font-large span {
   }
 
   .sidebar {
+    height: 100%;
     position: fixed;
     top: 60px;
     left: 0;
@@ -446,6 +509,19 @@ body.font-large span {
     width: 50px;
     height: 35px;
   }
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  #map {
+    display: none;       
+    flex: 1;             
+    min-height: 700px;   
+    height: calc(100vh - 60px);
+  }
 }
 
 /* =========================
@@ -462,3 +538,4 @@ body.font-large span {
     margin-left: 0;
   }
 }
+

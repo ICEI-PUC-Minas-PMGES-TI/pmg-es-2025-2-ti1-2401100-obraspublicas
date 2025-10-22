@@ -13,40 +13,82 @@ const API = "http://localhost:3000/obras";
 const userDropdownToggle = document.getElementById('userDropdownToggle');
 const userDropdown = document.getElementById('userDropdown');
 const toggleFontBtn = document.getElementById('toggleFont');
+const mapsBox = document.querySelector('.maps-box');
+const mapContainer = document.getElementById('map');
 
 let obrasData = [];
 let allBairros = [];
 let allConstrutoras = [];
 let allStatus = [];
 let debugMode = false;
+let mapInstance = null;
+let markersLayer = null;
 
 const formatCurrency = (value) => 'R$ ' + Number(value).toLocaleString('pt-BR');
-
-function normalize(str) {
-  if (!str) return '';
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase();
-}
+const normalize = (str) => str ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase() : '';
 
 // === TOGGLE SIDEBAR ===
 toggleSidebarBtn.addEventListener('click', () => {
-  if (window.innerWidth <= 768) {
-    sidebar.classList.toggle('open');
-  } else {
-    sidebar.classList.toggle('closed');
-  }
+  if (window.innerWidth <= 768) sidebar.classList.toggle('open');
+  else sidebar.classList.toggle('closed');
 });
 
 // === SLIDER ===
 slider.value = slider.max;
 sliderValue.textContent = formatCurrency(slider.value);
-
 slider.addEventListener('input', () => {
   sliderValue.textContent = formatCurrency(slider.value);
   filterObras();
 });
 
-// === RENDERIZAÇÃO DE OBRAS ===
-function renderObras(obras) {
+// === POPULAR SELECTS ===
+function populateSelect(selectId, items) {
+  const select = document.getElementById(selectId);
+  select.innerHTML = '<option value="Todas">Todas</option>';
+  Array.from(new Set(items.filter(Boolean))).sort().forEach(item => {
+    const option = document.createElement('option');
+    option.value = item;
+    option.textContent = item;
+    select.appendChild(option);
+  });
+}
+
+// === FILTRAR OBRAS ===
+function filterObras() {
+  const nome = normalize(nomeFilter.value);
+  const bairro = normalize(bairroFilter.value !== 'Todas' ? bairroFilter.value : '');
+  const construtora = normalize(construtoraFilter.value !== 'Todas' ? construtoraFilter.value : '');
+  const status = normalize(statusFilter.value !== 'Todas' ? statusFilter.value : '');
+  const custoMax = parseInt(slider.value);
+
+  const filtered = obrasData.filter(obra => {
+    const obraNome = normalize(obra.titulo);
+    const obraBairro = normalize(obra.endereco?.bairro);
+    const obraConstrutora = normalize(obra.empresaExecutora);
+    const obraStatus = normalize(obra.status);
+    const obraValor = obra.valorContratado ?? 0;
+
+    return (
+      (nome === '' || obraNome.includes(nome)) &&
+      (bairro === '' || obraBairro.includes(bairro)) &&
+      (construtora === '' || obraConstrutora.includes(construtora)) &&
+      (status === '' || obraStatus.includes(status)) &&
+      obraValor <= custoMax
+    );
+  });
+
+  updateView(filtered);
+}
+
+// === ATUALIZA GRID OU MAPA ===
+function updateView(obras) {
+  const isMapVisible = mapContainer.style.display === 'block';
+  if (isMapVisible) renderMap(obras);
+  else renderGrid(obras);
+}
+
+// === GRID ===
+function renderGrid(obras) {
   obrasGrid.innerHTML = '';
   if (!obras.length) {
     obrasGrid.innerHTML = '<p>Nenhuma obra encontrada.</p>';
@@ -76,10 +118,6 @@ function renderObras(obras) {
           <tr><th>Construtora</th><td>${obra.empresaExecutora || ''}</td></tr>
           <tr><th>Status</th><td>${obra.status || ''}</td></tr>
           <tr><th>Valor Total</th><td>${formatCurrency(obra.valorContratado || 0)}</td></tr>
-          ${Object.keys(obra).map(key => {
-            if (['titulo','empresaExecutora','status','valorContratado','anexos','endereco'].includes(key)) return '';
-            return `<tr><th>${key}</th><td>${obra[key]}</td></tr>`;
-          }).join('')}
         </table>
       `;
     }
@@ -88,61 +126,36 @@ function renderObras(obras) {
   });
 }
 
-// === POPULAR SELECTS ===
-function populateSelect(selectId, items) {
-  const select = document.getElementById(selectId);
-  select.innerHTML = '';
+// === MAPA ===
+function renderMap(obras) {
+  if (!mapInstance) {
+    mapInstance = L.map('map').setView([-19.9245, -43.935], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(mapInstance);
+    markersLayer = L.layerGroup().addTo(mapInstance);
+  }
 
-  const todasOption = document.createElement('option');
-  todasOption.value = 'Todas';
-  todasOption.textContent = 'Todas';
-  select.appendChild(todasOption);
+  markersLayer.clearLayers();
 
-  Array.from(new Set(items.filter(Boolean))).sort().forEach(item => {
-    const option = document.createElement('option');
-    option.value = item;
-    option.textContent = item;
-    select.appendChild(option);
-  });
-}
+  obras.forEach(obra => {
+    const lat = parseFloat(obra.latitude || obra.endereco?.lat);
+    const lng = parseFloat(obra.longitude || obra.endereco?.lng);
 
-// === FILTRAR OBRAS ===
-function filterObras() {
-  const nomeRaw = nomeFilter.value;
-  const bairroRaw = bairroFilter.value;
-  const construtoraRaw = construtoraFilter.value;
-  const statusRaw = statusFilter.value;
-  const custoMax = parseInt(slider.value);
-
-  const nome = nomeRaw ? normalize(nomeRaw) : '';
-  const bairro = (bairroRaw && bairroRaw.toLowerCase() !== 'todas') ? normalize(bairroRaw) : '';
-  const construtora = (construtoraRaw && construtoraRaw.toLowerCase() !== 'todas') ? normalize(construtoraRaw) : '';
-  const status = (statusRaw && statusRaw.toLowerCase() !== 'todas') ? normalize(statusRaw) : '';
-
-  const filtered = obrasData.filter(obra => {
-    const obraNome = normalize(obra.titulo);
-    const obraBairro = normalize(obra.endereco?.bairro);
-    const obraConstrutora = normalize(obra.empresaExecutora);
-    const obraStatus = normalize(obra.status);
-    const obraValor = obra.valorContratado ?? 0;
-
-    return (
-      (nome === '' || obraNome.includes(nome)) &&
-      (bairro === '' || obraBairro.includes(bairro)) &&
-      (construtora === '' || obraConstrutora.includes(construtora)) &&
-      (status === '' || obraStatus.includes(status)) &&
-      obraValor <= custoMax
-    );
+    if (!isNaN(lat) && !isNaN(lng)) {
+      const marker = L.marker([lat, lng]).addTo(markersLayer);
+      marker.bindPopup(`
+        <b>${obra.titulo}</b><br>
+        ${obra.endereco?.bairro || ''}, ${obra.endereco?.cidade || ''}<br>
+        <small>${obra.status}</small>
+      `);
+    }
   });
 
-  renderObras(filtered);
+  if (markersLayer.getLayers().length > 0) {
+    mapInstance.fitBounds(markersLayer.getBounds());
+  }
 }
-
-// === EVENTOS INPUTS ===
-nomeFilter.addEventListener('input', filterObras);
-[bairroFilter, construtoraFilter, statusFilter].forEach(select => {
-  select.addEventListener('change', filterObras);
-});
 
 // === LIMPAR FILTROS ===
 clearFiltersBtn.addEventListener('click', () => {
@@ -152,17 +165,19 @@ clearFiltersBtn.addEventListener('click', () => {
   statusFilter.value = 'Todas';
   slider.value = slider.max;
   sliderValue.textContent = formatCurrency(slider.value);
-
-  renderObras(obrasData);
+  updateView(obrasData);
 });
 
-// === BOTÃO DEBUG ===
+// === EVENTOS ===
+nomeFilter.addEventListener('input', filterObras);
+[bairroFilter, construtoraFilter, statusFilter].forEach(select => select.addEventListener('change', filterObras));
+
 if (debugBtn) {
   debugBtn.addEventListener('click', () => {
     debugMode = !debugMode;
     debugBtn.classList.toggle('active', debugMode);
     debugBtn.textContent = debugMode ? 'Sair do Debug' : 'Modo Debug';
-    renderObras(obrasData);
+    updateView(obrasData);
   });
 }
 
@@ -173,12 +188,7 @@ async function init() {
     if (!res.ok) throw new Error('Erro na API');
     const data = await res.json();
 
-    console.log('Resposta da API:', data);
-
-    // Garantir que obrasData seja array
     obrasData = Array.isArray(data) ? data : [];
-
-    // Popular filtros
     allBairros = obrasData.map(o => o.endereco?.bairro || '');
     allConstrutoras = obrasData.map(o => o.empresaExecutora || '');
     allStatus = obrasData.map(o => o.status || '');
@@ -187,7 +197,7 @@ async function init() {
     populateSelect('construtora', allConstrutoras);
     populateSelect('status', allStatus);
 
-    renderObras(obrasData);
+    updateView(obrasData);
   } catch (err) {
     console.error('Erro ao carregar obras:', err);
   }
@@ -195,23 +205,32 @@ async function init() {
 
 init();
 
-// === ACESSIBILIDADE: AUMENTAR FONTE ===
+// === ACESSIBILIDADE ===
 userDropdownToggle.addEventListener('click', (e) => {
-  e.stopPropagation(); // evita fechar ao clicar dentro
+  e.stopPropagation();
   userDropdown.style.display = userDropdown.style.display === 'flex' ? 'none' : 'flex';
 });
 
-// Fechar dropdown ao clicar fora
-document.addEventListener('click', () => {
-  userDropdown.style.display = 'none';
-});
+document.addEventListener('click', () => userDropdown.style.display = 'none');
 
-// Acessibilidade: aumentar/reduzir fonte
-if (localStorage.getItem('fontLarge') === 'true') {
-  document.body.classList.add('font-large');
-}
-
+if (localStorage.getItem('fontLarge') === 'true') document.body.classList.add('font-large');
 toggleFontBtn.addEventListener('click', () => {
   const isLarge = document.body.classList.toggle('font-large');
   localStorage.setItem('fontLarge', isLarge);
 });
+
+// === TROCAR ENTRE GRID E MAPA ===
+mapsBox.addEventListener('click', () => {
+  const isMapVisible = mapContainer.style.display === 'block';
+  mapContainer.style.display = isMapVisible ? 'none' : 'block';
+  obrasGrid.style.display = isMapVisible ? 'grid' : 'none';
+
+  updateView(obrasData);
+
+  if (!isMapVisible && mapInstance) {
+    setTimeout(() => mapInstance.invalidateSize(), 200);
+  }
+});
+
+
+
