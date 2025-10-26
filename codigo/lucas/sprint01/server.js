@@ -19,7 +19,7 @@ function saveFeedbacks(feedbacks) {
 }
 
 app.get("/", (req, res) => {
-  res.send("API de Feedbacks - Obra Prima 🚧");
+  res.send("API de Feedbacks - Obra Prima");
 });
 
 app.get("/feedbacks", (req, res) => {
