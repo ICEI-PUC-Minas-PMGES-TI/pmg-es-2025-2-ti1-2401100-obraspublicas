@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro de Cidadão</title>
+    <title>Gestão de Cidadão</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="header">
         <div class="logo-container">
-          <img src="logo.png" alt="Obra Prima" class="logo-image" />
+          <img src="imgs/logo.png" alt="Obra Prima" class="logo-image" />
           <div class="site-name">Obra Prima</div>
         </div>
         <div class="header-content">
-          <h1>Cadastro de Cidadão</h1>
+          <h1 id="formTitle">Cadastro de Cidadão</h1>
         </div>
       </div>
 
@@ -38,7 +38,6 @@
                 />
               </div>
             </div>
-
             <div class="form-row">
               <div class="form-group">
                 <label for="birthDate">Data de Nascimento</label>
@@ -111,7 +110,6 @@
                 </div>
               </div>
             </div>
-
             <div class="form-row">
               <div class="form-group">
                 <label for="street">Logradouro</label>
@@ -122,7 +120,6 @@
                 <input type="text" id="number" name="number" required />
               </div>
             </div>
-
             <div class="form-row">
               <div class="form-group">
                 <label for="complement">Complemento</label>
@@ -138,7 +135,6 @@
                 />
               </div>
             </div>
-
             <div class="form-row">
               <div class="form-group">
                 <label for="city">Cidade</label>
@@ -202,8 +198,8 @@
           <div class="divider"></div>
 
           <div class="btn-container">
-            <button type="button" class="btn btn-secondary">Entrar</button>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <a href="listagem.html" class="btn btn-secondary"> Ver Listagem </a>
+            <button type="submit" class="btn btn-primary">Salvar</button>
           </div>
         </form>
       </div>
