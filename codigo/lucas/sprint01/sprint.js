@@ -29,8 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
       descricao: document.getElementById("descricao").value
     };
 
-    console.log("Feedback enviado:", dados);
-    alert("Feedback enviado com sucesso!");
+    fetch("http://localhost:3000/feedbacks", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(dados)
+})
+  .then(response => response.json())
+  .then(data => {
+    alert(data.message || "Feedback enviado com sucesso!");
     form.reset();
+  })
+  .catch(error => {
+    console.error("Erro ao enviar feedback:", error);
+    alert("Erro ao enviar feedback. Verifique a conexão com a API.");
+  });
   });
 });
