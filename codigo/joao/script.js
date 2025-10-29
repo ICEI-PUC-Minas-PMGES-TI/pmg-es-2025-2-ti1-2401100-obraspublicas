@@ -8,7 +8,7 @@ const statusFilter = document.getElementById('status');
 const nomeFilter = document.getElementById('nome');
 const clearFiltersBtn = document.getElementById('clearFilters');
 const obrasGrid = document.getElementById('obrasGrid');
-const debugBtn = document.querySelector('.debug');
+const detalhesBtn = document.querySelector('.detalhes');
 const API = "http://localhost:3000/obras";
 const userDropdownToggle = document.getElementById('userDropdownToggle');
 const userDropdown = document.getElementById('userDropdown');
@@ -20,7 +20,7 @@ let obrasData = [];
 let allBairros = [];
 let allConstrutoras = [];
 let allStatus = [];
-let debugMode = false;
+let detalhesBar = false;
 let mapInstance = null;
 let markersLayer = null;
 
@@ -103,28 +103,51 @@ function renderGrid(obras) {
       ? (obra.anexos.find(a => a.tipo === "imagem")?.url || './img/Logo2.png')
       : './img/Logo2.png';
 
-    if (!debugMode) {
-      card.innerHTML = `
-        <img src="${imgSrc}" alt="obra" onerror="this.onerror=null; this.src='./img/Logo2.png'">
-        <h3>${obra.titulo}</h3>
-        <button>Ver detalhes</button>
-      `;
-    } else {
-      card.classList.add('debug-card');
-      card.innerHTML = `
-        <h3>${obra.titulo}</h3>
-        <table class="debug-table">
-          <tr><th>Bairro</th><td>${obra.endereco?.bairro || ''}</td></tr>
-          <tr><th>Construtora</th><td>${obra.empresaExecutora || ''}</td></tr>
-          <tr><th>Status</th><td>${obra.status || ''}</td></tr>
-          <tr><th>Valor Total</th><td>${formatCurrency(obra.valorContratado || 0)}</td></tr>
-        </table>
-      `;
-    }
+    card.innerHTML = `
+      <img src="${imgSrc}" alt="obra" onerror="this.onerror=null; this.src='./img/Logo2.png'">
+      <h3>${obra.titulo}</h3>
+      <button class="detalhesBtn">Ver detalhes</button>
+    `;
 
     obrasGrid.appendChild(card);
+
+    // Evento do botão de detalhes
+    const detalhesBtn = card.querySelector('.detalhesBtn');
+    detalhesBtn.addEventListener('click', () => showDetalhesSidebar(obra));
   });
 }
+const detalhesSidebar = document.getElementById('detalhesSidebar');
+const detalhesContent = document.getElementById('detalhesContent');
+const closeDetalhes = document.getElementById('closeDetalhes');
+
+function showDetalhesSidebar(obra) {
+  // Fecha sidebar da esquerda
+  sidebar.classList.remove('open');
+  sidebar.classList.add('closed');
+
+  // Monta conteúdo
+  detalhesContent.innerHTML = `
+    <h2>${obra.titulo}</h2>
+    <img src="${obra.anexos?.find(a => a.tipo === "imagem")?.url || './img/Logo2.png'}" alt="obra" style="width:100%; margin-bottom:1rem;" />
+    <table>
+      <tr><th>Bairro</th><td>${obra.endereco?.bairro || ''}</td></tr>
+      <tr><th>Construtora</th><td>${obra.empresaExecutora || ''}</td></tr>
+      <tr><th>Status</th><td>${obra.status || ''}</td></tr>
+      <tr><th>Valor Total</th><td>${formatCurrency(obra.valorContratado || 0)}</td></tr>
+    </table>
+    <p>${obra.descricao || ''}</p>
+  `;
+
+  // Abre sidebar
+  detalhesSidebar.classList.add('open');
+}
+
+// Fechar sidebar
+closeDetalhes.addEventListener('click', () => {
+  detalhesSidebar.classList.remove('open');
+});
+
+
 
 // === MAPA ===
 function renderMap(obras) {
@@ -172,13 +195,12 @@ clearFiltersBtn.addEventListener('click', () => {
 nomeFilter.addEventListener('input', filterObras);
 [bairroFilter, construtoraFilter, statusFilter].forEach(select => select.addEventListener('change', filterObras));
 
-if (debugBtn) {
-  debugBtn.addEventListener('click', () => {
-    debugMode = !debugMode;
-    debugBtn.classList.toggle('active', debugMode);
-    debugBtn.textContent = debugMode ? 'Sair do Debug' : 'Modo Debug';
-    updateView(obrasData);
-  });
+if(detalhesBtn){
+  detalhesBtn.addEventListener('click', () =>{
+    detalhesBar = !detalhesBar;
+    detalhesBtn.classList.toggle('active', detalhesBar);
+    console.log("Clique no detalhes!");
+  })
 }
 
 // === INIT ===

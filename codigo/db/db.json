@@ -1,4 +1,5 @@
 {
+
   "usuarios": [
     {
       "id": 1,
@@ -15,11 +16,804 @@
       "email": "user@abc.com"
     },
     {
+      "id": 3,
       "login": "rommel",
       "senha": "123",
       "nome": "Rommel",
-      "email": "rommel@gmail.com",
-      "id": 3
+      "email": "rommel@gmail.com"
+    }
+  ],
+
+  "cidadaos": [
+    {
+      "id": "b01f",
+      "dadosPessoais": {
+        "nomeCompleto": "Gustavo Henrique de Lima",
+        "cpf": "178.197.816-61",
+        "dataNascimento": "2004-08-23",
+        "genero": null
+      },
+      "contato": {
+        "email": "gustavohgordiano@gmail.com",
+        "telefone": "(31) 98603-7703"
+      },
+      "endereco": {
+        "cep": "31810-440",
+        "logradouro": "Rua cinco de Julho",
+        "numero": "115",
+        "complemento": "",
+        "bairro": "Primeiro de Maio",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      },
+      "seguranca": {
+        "password": "gustavo21hl"
+      }
+    },
+    {
+      "id": "999a",
+      "dadosPessoais": {
+        "nomeCompleto": "Ana Luiza Assunção",
+        "cpf": "102.377.586-79",
+        "dataNascimento": "2004-10-22",
+        "genero": "female"
+      },
+      "contato": {
+        "email": "analuiza@gmail.com",
+        "telefone": "(31) 99194-7644"
+      },
+      "endereco": {
+        "cep": "30660-324",
+        "logradouro": "Rua Ana Rosa de Jesus",
+        "numero": "273",
+        "complemento": "",
+        "bairro": "Diamante (Barreiro)",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      },
+      "seguranca": {
+        "password": "analuiza"
+      }
+    }
+  ],
+
+    "obras" :[
+    {
+      "id": "1",
+      "titulo": "Reforma da Praça Central",
+      "descricao": "Projeto de reforma da praça central visando melhorias estruturais e urbanísticas na região de Barreiro.",
+      "valorContratado": 5610099,
+      "status": "Paralisada",
+      "dataInicio": "2024-05-27",
+      "previsaoTermino": "2025-04-18",
+      "orgaoResponsavel": "Secretaria de Desenvolvimento",
+      "construtora": "Construmax Engenharia",
+      "latitude": -19.9822,
+      "longitude": -44.0154,
+      "endereco": {
+        "logradouro": "Rua Principal",
+        "numero": "329",
+        "bairro": "Barreiro",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "33675-748"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-1.jpg", "url": "img/obra.png"},
+        {"tipo": "documento", "nomeArquivo": "documento-1.pdf", "url": "https://exemplo.com/uploads/documento-1.pdf"}
+      ]
+    },
+    {
+      "id": "2",
+      "titulo": "Construção do Centro de Saúde Barreiro",
+      "descricao": "Projeto de construção do centro de saúde Barreiro visando melhorias estruturais e urbanísticas na região de Nova Suíça.",
+      "valorContratado": 4201775,
+      "status": "Paralisada",
+      "dataInicio": "2024-03-01",
+      "previsaoTermino": "2025-02-19",
+      "orgaoResponsavel": "Secretaria de Saúde",
+      "empresaExecutora": "Construmax Engenharia",
+      "latitude": -19.9403,
+      "longitude": -43.9705,
+      "endereco": {
+        "logradouro": "Rua Esperança",
+        "numero": "309",
+        "bairro": "Nova Suíça",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "32742-901"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-2.jpg", "url": "img/logo3.png"},
+        {"tipo": "documento", "nomeArquivo": "documento-2.pdf", "url": "https://exemplo.com/uploads/documento-2.pdf"}
+      ]
+    },
+    {
+      "id": "3",
+      "titulo": "Pavimentação da Rua das Flores",
+      "descricao": "Projeto de pavimentação da rua das flores visando melhorias estruturais e urbanísticas na região de Venda Nova.",
+      "valorContratado": 4492379,
+      "status": "Paralisada",
+      "dataInicio": "2024-01-13",
+      "previsaoTermino": "2024-10-28",
+      "orgaoResponsavel": "Prefeitura Municipal",
+      "empresaExecutora": "Construtora Z",
+      "latitude": -19.8241,
+      "longitude": -43.9559,
+      "endereco": {
+        "logradouro": "Rua da Liberdade",
+        "numero": "703",
+        "bairro": "Venda Nova",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "39477-568"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-3.jpg", "url": "https://exemplo.com/uploads/obra-3.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-3.pdf", "url": "https://exemplo.com/uploads/documento-3.pdf"}
+      ]
+    },
+    {
+      "id": "4",
+      "titulo": "Construção da Escola Municipal Esperança",
+      "descricao": "Projeto de construção da escola municipal esperança visando melhorias estruturais e urbanísticas na região de Savassi.",
+      "valorContratado": 2475489,
+      "status": "Paralisada",
+      "dataInicio": "2024-02-18",
+      "previsaoTermino": "2024-09-19",
+      "orgaoResponsavel": "Secretaria de Saúde",
+      "empresaExecutora": "Construtora Gamma",
+      "latitude": -19.9383,
+      "longitude": -43.9331,
+      "endereco": {
+        "logradouro": "Rua Esperança",
+        "numero": "822",
+        "bairro": "Savassi",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "37988-726"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-4.jpg", "url": "https://exemplo.com/uploads/obra-4.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-4.pdf", "url": "https://exemplo.com/uploads/documento-4.pdf"}
+      ]
+    },
+    {
+      "id": "5",
+      "titulo": "Revitalização do Viaduto Santa Tereza",
+      "descricao": "Projeto de revitalização do viaduto Santa Tereza visando melhorias estruturais e urbanísticas na região de Pampulha.",
+      "valorContratado": 2590428,
+      "status": "Concluída",
+      "dataInicio": "2024-05-18",
+      "previsaoTermino": "2024-11-16",
+      "orgaoResponsavel": "Secretaria de Infraestrutura",
+      "empresaExecutora": "Construtora Beta",
+      "latitude": -19.8709,
+      "longitude": -43.9712,
+      "endereco": {
+        "logradouro": "Rua Esperança",
+        "numero": "834",
+        "bairro": "Pampulha",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "33614-117"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-5.jpg", "url": "https://exemplo.com/uploads/obra-5.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-5.pdf", "url": "https://exemplo.com/uploads/documento-5.pdf"}
+      ]
+    },
+    {
+      "id": "6",
+      "titulo": "Ampliação do Hospital Regional Norte",
+      "descricao": "Projeto de ampliação do hospital regional norte visando melhorias estruturais e urbanísticas na região de Savassi.",
+      "valorContratado": 6925284,
+      "status": "Paralisada",
+      "dataInicio": "2025-01-16",
+      "previsaoTermino": "2025-06-01",
+      "orgaoResponsavel": "Prefeitura Municipal",
+      "empresaExecutora": "Construtora Delta",
+      "latitude": -19.9375,
+      "longitude": -43.9337,
+      "endereco": {
+        "logradouro": "Rua dos Andradas",
+        "numero": "106",
+        "bairro": "Savassi",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "32988-220"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-6.jpg", "url": "https://exemplo.com/uploads/obra-6.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-6.pdf", "url": "https://exemplo.com/uploads/documento-6.pdf"}
+      ]
+    },
+    {
+      "id": "7",
+      "titulo": "Reforma do Mercado Distrital",
+      "descricao": "Projeto de reforma do mercado distrital visando melhorias estruturais e urbanísticas na região de Venda Nova.",
+      "valorContratado": 9139342,
+      "status": "Paralisada",
+      "dataInicio": "2025-04-21",
+      "previsaoTermino": "2025-08-25",
+      "orgaoResponsavel": "Prefeitura Municipal",
+      "empresaExecutora": "Construmax Engenharia",
+      "latitude": -19.8250,
+      "longitude": -43.9550,
+      "endereco": {
+        "logradouro": "Rua dos Andradas",
+        "numero": "692",
+        "bairro": "Venda Nova",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "39703-202"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-7.jpg", "url": "https://exemplo.com/uploads/obra-7.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-7.pdf", "url": "https://exemplo.com/uploads/documento-7.pdf"}
+      ]
+    },
+    {
+      "id": "8",
+      "titulo": "Construção da Creche Jardim das Rosas",
+      "descricao": "Projeto de construção da creche Jardim das Rosas visando melhorias estruturais e urbanísticas na região de Savassi.",
+      "valorContratado": 7414005,
+      "status": "Paralisada",
+      "dataInicio": "2025-01-09",
+      "previsaoTermino": "2026-01-01",
+      "orgaoResponsavel": "Secretaria de Saúde",
+      "empresaExecutora": "Construtora Horizonte",
+      "latitude": -19.9365,
+      "longitude": -43.9345,
+      "endereco": {
+        "logradouro": "Rua da Liberdade",
+        "numero": "43",
+        "bairro": "Savassi",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "34697-510"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-8.jpg", "url": "https://exemplo.com/uploads/obra-8.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-8.pdf", "url": "https://exemplo.com/uploads/documento-8.pdf"}
+      ]
+    },
+    {
+      "id": "9",
+      "titulo": "Recapeamento da Avenida dos Andradas",
+      "descricao": "Projeto de recapeamento da avenida dos andradas visando melhorias estruturais e urbanísticas na região de Savassi.",
+      "valorContratado": 9391778,
+      "status": "Em andamento",
+      "dataInicio": "2024-09-05",
+      "previsaoTermino": "2025-04-15",
+      "orgaoResponsavel": "Secretaria de Obras",
+      "empresaExecutora": "Construtora Minas",
+      "latitude": -19.9350,
+      "longitude": -43.9350,
+      "endereco": {
+        "logradouro": "Rua das Flores",
+        "numero": "343",
+        "bairro": "Savassi",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "35370-931"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-9.jpg", "url": "https://exemplo.com/uploads/obra-9.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-9.pdf", "url": "https://exemplo.com/uploads/documento-9.pdf"}
+      ]
+    },
+    {
+      "id": "10",
+      "titulo": "Construção da UPA Savassi",
+      "descricao": "Projeto de construção da UPA Savassi visando melhorias estruturais e urbanísticas na região de Centro.",
+      "valorContratado": 6822954,
+      "status": "Paralisada",
+      "dataInicio": "2025-07-02",
+      "previsaoTermino": "2025-11-18",
+      "orgaoResponsavel": "Secretaria de Educação",
+      "empresaExecutora": "Construtora Minas",
+      "latitude": -19.9270,
+      "longitude": -43.9355,
+      "endereco": {
+        "logradouro": "Rua São João",
+        "numero": "545",
+        "bairro": "Centro",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "35295-922"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-10.jpg", "url": "https://exemplo.com/uploads/obra-10.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-10.pdf", "url": "https://exemplo.com/uploads/documento-10.pdf"}
+      ]
+    },
+    {
+      "id": "11",
+      "titulo": "Requalificação da Lagoa da Pampulha",
+      "descricao": "Projeto de requalificação da lagoa da Pampulha visando melhorias estruturais e urbanísticas na região de Centro.",
+      "valorContratado": 6666501,
+      "status": "Em andamento",
+      "dataInicio": "2026-08-07",
+      "previsaoTermino": "2027-05-29",
+      "orgaoResponsavel": "Prefeitura Municipal",
+      "empresaExecutora": "Construtora Minas",
+      "latitude": -19.8675,
+      "longitude": -43.9718,
+      "endereco": {
+        "logradouro": "Rua Principal",
+        "numero": "32",
+        "bairro": "Centro",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "36152-103"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-11.jpg", "url": "https://exemplo.com/uploads/obra-11.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-11.pdf", "url": "https://exemplo.com/uploads/documento-11.pdf"}
+      ]
+    },
+    {
+      "id": "12",
+      "titulo": "Construção da Praça da Juventude",
+      "descricao": "Projeto de construção da praça da juventude visando melhorias estruturais e urbanísticas na região de Nova Lima.",
+      "valorContratado": 2075604,
+      "status": "Paralisada",
+      "dataInicio": "2024-01-14",
+      "previsaoTermino": "2024-07-24",
+      "orgaoResponsavel": "Secretaria de Obras",
+      "empresaExecutora": "Construtora Minas",
+      "latitude": -19.9672,
+      "longitude": -43.9501,
+      "endereco": {
+        "logradouro": "Rua São João",
+        "numero": "756",
+        "bairro": "Nova Lima",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "32339-335"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-12.jpg", "url": "https://exemplo.com/uploads/obra-12.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-12.pdf", "url": "https://exemplo.com/uploads/documento-12.pdf"}
+      ]
+    },
+    {
+      "id": "13",
+      "titulo": "Reforma do Teatro Municipal",
+      "descricao": "Projeto de reforma do teatro municipal visando melhorias estruturais e urbanísticas na região de Nova Lima.",
+      "valorContratado": 4682650,
+      "status": "Concluída",
+      "dataInicio": "2025-11-19",
+      "previsaoTermino": "2026-07-27",
+      "orgaoResponsavel": "Secretaria de Educação",
+      "empresaExecutora": "Construtora Alpha",
+      "latitude": -19.9660,
+      "longitude": -43.9485,
+      "endereco": {
+        "logradouro": "Rua dos Andradas",
+        "numero": "318",
+        "bairro": "Nova Lima",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "39893-777"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-13.jpg", "url": "https://exemplo.com/uploads/obra-13.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-13.pdf", "url": "https://exemplo.com/uploads/documento-13.pdf"}
+      ]
+    },
+    {
+      "id": "14",
+      "titulo": "Construção do Viaduto Oeste",
+      "descricao": "Projeto de construção do viaduto oeste visando melhorias estruturais e urbanísticas na região de Savassi.",
+      "valorContratado": 1657413,
+      "status": "Paralisada",
+      "dataInicio": "2026-06-17",
+      "previsaoTermino": "2026-11-29",
+      "orgaoResponsavel": "Prefeitura Municipal",
+      "empresaExecutora": "Construtora Z",
+      "latitude": -19.9368,
+      "longitude": -43.9332,
+      "endereco": {
+        "logradouro": "Rua da Liberdade",
+        "numero": "533",
+        "bairro": "Savassi",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "35405-107"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-14.jpg", "url": "https://exemplo.com/uploads/obra-14.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-14.pdf", "url": "https://exemplo.com/uploads/documento-14.pdf"}
+      ]
+    },
+    {
+      "id": "15",
+      "titulo": "Urbanização do Bairro São Gabriel",
+      "descricao": "Projeto de urbanização do bairro São Gabriel visando melhorias estruturais e urbanísticas na região de Venda Nova.",
+      "valorContratado": 2246413,
+      "status": "Paralisada",
+      "dataInicio": "2025-03-05",
+      "previsaoTermino": "2025-11-08",
+      "orgaoResponsavel": "Secretaria de Educação",
+      "empresaExecutora": "Construtora Delta",
+      "latitude": -19.8232,
+      "longitude": -43.9545,
+      "endereco": {
+        "logradouro": "Rua Principal",
+        "numero": "129",
+        "bairro": "Venda Nova",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "39477-568"
+      },
+      "anexos": [
+        {"tipo": "imagem", "nomeArquivo": "obra-15.jpg", "url": "https://exemplo.com/uploads/obra-15.jpg"},
+        {"tipo": "documento", "nomeArquivo": "documento-15.pdf", "url": "https://exemplo.com/uploads/documento-15.pdf"}
+      ]
+    }
+  ],
+
+ 
+  "cadastro_gestor": {
+    "tela": {
+      "nome": "Cadastro de Gestor",
+      "descricao": "Tela responsável pelo cadastro de novos gestores no sistema Obra Prima. Permite inserir dados pessoais, profissionais, de acesso e endereço, com validação e envio para a API REST.",
+      "tecnologias": {
+        "frontend": ["HTML5", "CSS3", "JavaScript (ES6)", "Bootstrap 5"],
+        "backend": ["API RESTful (JSON)", "JSON Server (mock de testes)"],
+        "frameworks_auxiliares": ["Font Awesome (ícones)", "Google Fonts (tipografia)"]
+      },
+      "estrutura": {
+        "header": {
+          "logo": "Logo Obra Prima",
+          "cor_de_fundo": "#1b7742",
+          "navegacao": []
+        },
+        "formulario": {
+          "titulo": "Cadastro de Gestor",
+          "descricao": "Preencha os dados abaixo para criar sua conta de gestor no sistema.",
+          "secoes": {
+            "dados_pessoais": {
+              "campos": [
+                { "nome": "nomeCompleto", "tipo": "texto", "placeholder": "Digite seu nome completo", "obrigatorio": true },
+                { "nome": "cpf", "tipo": "texto", "placeholder": "000.000.000-00", "mascara": "CPF", "obrigatorio": true },
+                { "nome": "email", "tipo": "email", "placeholder": "seu@email.com", "obrigatorio": true },
+                { "nome": "telefone", "tipo": "texto", "placeholder": "(00) 00000-0000", "mascara": "telefone" }
+              ]
+            },
+            "dados_profissionais": {
+              "campos": [
+                { "nome": "orgaoInstituicao", "tipo": "texto", "placeholder": "Nome da instituição" },
+                { "nome": "cargo", "tipo": "texto", "placeholder": "Seu cargo atual" },
+                { "nome": "experiencia", "tipo": "select", "opcoes": ["1 a 3 anos", "4 a 6 anos", "7+ anos"] },
+                { "nome": "areaAtuacao", "tipo": "select", "opcoes": ["Engenharia", "Gestão Pública", "Infraestrutura", "Outros"] }
+              ]
+            },
+            "dados_acesso": {
+              "campos": [
+                { "nome": "senha", "tipo": "password", "placeholder": "Mínimo 8 caracteres", "validacao": "mínimo 8 caracteres" },
+                { "nome": "confirmarSenha", "tipo": "password", "placeholder": "Digite novamente" }
+              ]
+            },
+            "endereco": {
+              "campos": [
+                { "nome": "enderecoCompleto", "tipo": "texto", "placeholder": "Rua, número, bairro, cidade - UF" }
+              ]
+            },
+            "aceite_termos": {
+              "opcoes": [
+                "Aceito os termos de uso e política de privacidade do sistema",
+                "Desejo receber notificações sobre atualizações do sistema"
+              ]
+            }
+          },
+          "botoes": [
+            { "nome": "limparFormulario", "texto": "🧹 Limpar Formulário", "cor": "cinza", "acao": "reset()" },
+            { "nome": "cadastrarGestor", "texto": "👤 Cadastrar Gestor", "cor": "verde", "acao": "submit()" }
+          ],
+          "links": {
+            "login": "Já possui uma conta? Faça login aqui",
+            "suporte": "Entre em contato com o suporte técnico"
+          }
+        },
+        "footer": { "texto": "Precisa de ajuda? Entre em contato com o suporte técnico." }
+      },
+      "interacao": {
+        "validacoes": [
+          "Todos os campos obrigatórios devem ser preenchidos",
+          "E-mail válido exigido",
+          "Senhas devem coincidir",
+          "CPF deve seguir formato 000.000.000-00"
+        ],
+        "integracao_api": {
+          "endpoint": "https://api.obraprima.com/gestores",
+          "metodo": "POST",
+          "corpo_exemplo": {
+            "nomeCompleto": "João da Silva",
+            "cpf": "123.456.789-00",
+            "email": "joao@exemplo.com",
+            "telefone": "(31) 99999-9999",
+            "orgaoInstituicao": "Prefeitura Municipal",
+            "cargo": "Gestor de Obras",
+            "experiencia": "4 a 6 anos",
+            "areaAtuacao": "Infraestrutura",
+            "senha": "senha1234",
+            "enderecoCompleto": "Rua das Flores, 123, Centro - MG",
+            "aceitouTermos": true,
+            "receberNotificacoes": false
+          }
+        }
+      }
+    },
+    "gestores": []
+  },
+
+"cadastro_pessoas": [
+  {
+    "dadosPessoais": {
+      "nomeCompleto": "Maria Joaquina de Amaral",
+      "cpf": "123.456.789-00",
+      "dataNascimento": "1992-10-25",
+      "genero": "female"
+    },
+    "contato": {
+      "email": "maria.joaquina@exemplo.com",
+      "telefone": "(11) 98765-4321"
+    },
+    "endereco": {
+      "cep": "01001-000",
+      "logradouro": "Rua das Flores",
+      "numero": "123",
+      "complemento": "Apto 10",
+      "bairro": "Jardim Primavera",
+      "cidade": "São Paulo",
+      "estado": "SP"
+    }
+  }
+],
+
+  "feedbacks": [
+    {
+      "id": 1,
+      "obra": "Construção da Praça Central",
+      "nome": "João Silva",
+      "cpf": "123.456.789-00",
+      "email": "joao.silva@example.com",
+      "tipo": "elogio",
+      "titulo": "Excelente revitalização!",
+      "descricao": "A nova praça ficou muito bonita e funcional. Agradeço pela iluminação e área de lazer.",
+      "dataEnvio": "2025-10-10T14:35:00",
+      "anexo": "img/praca_central.jpg"
+    },
+    {
+      "id": 2,
+      "obra": "Reforma da Escola Municipal",
+      "nome": "Maria Oliveira",
+      "cpf": "987.654.321-00",
+      "email": "maria.oliveira@example.com",
+      "tipo": "reclamacao",
+      "titulo": "Atraso nas obras",
+      "descricao": "A escola ainda não foi entregue e há muito entulho no entorno. Solicito providências.",
+      "dataEnvio": "2025-10-11T09:20:00",
+      "anexo": "img/escola.jpg"
+    },
+    {
+      "id": 3,
+      "obra": "Pavimentação da Rua das Flores",
+      "nome": "Carlos Mendes",
+      "cpf": "321.654.987-00",
+      "email": "carlos.mendes@example.com",
+      "tipo": "sugestao",
+      "titulo": "Melhorar o escoamento de água",
+      "descricao": "Após a pavimentação, a rua ficou com pontos de acúmulo de água. Sugiro pequenas correções.",
+      "dataEnvio": "2025-10-12T16:45:00",
+      "anexo": "img/rua_flores.png"
+    },
+    {
+      "id": 4,
+      "obra": "Ampliação do Hospital Regional",
+      "nome": "Fernanda Rocha",
+      "cpf": "654.987.321-00",
+      "email": "fernanda.rocha@example.com",
+      "tipo": "elogio",
+      "titulo": "Obra essencial para a comunidade",
+      "descricao": "Excelente iniciativa! O hospital ampliado vai ajudar muito no atendimento da região.",
+      "dataEnvio": "2025-10-13T11:10:00",
+      "anexo": "img/hospital.jpg"
+    },
+    {
+      "id": 5,
+      "obra": "Construção da Praça Central",
+      "nome": "Lucas Nascimento",
+      "cpf": "852.963.741-00",
+      "email": "lucas.nascimento@example.com",
+      "tipo": "reclamacao",
+      "titulo": "Falta de acessibilidade",
+      "descricao": "Os bancos da praça ficaram bons, mas faltam rampas de acesso para cadeirantes.",
+      "dataEnvio": "2025-10-14T08:50:00",
+      "anexo": "img/acessibilidade.jpg"
+    },
+    {
+      "id": 6,
+      "obra": "Reforma da Escola Municipal",
+      "nome": "Juliana Torres",
+      "cpf": "741.852.963-00",
+      "email": "juliana.torres@example.com",
+      "tipo": "elogio",
+      "titulo": "Nova estrutura está ótima",
+      "descricao": "A escola reformada ficou moderna, com ótimas salas e área externa para os alunos.",
+      "dataEnvio": "2025-10-15T10:25:00",
+      "anexo": "img/escola_nova.jpg"
+    },
+    {
+      "id": 7,
+      "obra": "Pavimentação da Rua das Flores",
+      "nome": "Ricardo Lima",
+      "cpf": "963.741.852-00",
+      "email": "ricardo.lima@example.com",
+      "tipo": "elogio",
+      "titulo": "Trânsito mais seguro",
+      "descricao": "A pavimentação ajudou muito na fluidez do trânsito, parabéns pela execução.",
+      "dataEnvio": "2025-10-16T13:30:00",
+      "anexo": "img/rua_flores_ok.jpg"
+    },
+    {
+      "id": 8,
+      "obra": "Ampliação do Hospital Regional",
+      "nome": "Camila Duarte",
+      "cpf": "369.258.147-00",
+      "email": "camila.duarte@example.com",
+      "tipo": "sugestao",
+      "titulo": "Área de espera pequena",
+      "descricao": "O novo setor de atendimento ficou bom, mas a recepção ainda é muito pequena.",
+      "dataEnvio": "2025-10-17T09:40:00",
+      "anexo": "img/hospital_sala.jpg"
+    },
+    {
+      "id": 9,
+      "obra": "Construção da Praça Central",
+      "nome": "Paula Souza",
+      "cpf": "159.357.258-00",
+      "email": "paula.souza@example.com",
+      "tipo": "elogio",
+      "titulo": "Espaço para lazer em família",
+      "descricao": "A nova praça é ótima para passear com as crianças, ficou muito agradável.",
+      "dataEnvio": "2025-10-17T14:50:00",
+      "anexo": "img/praca_familia.png"
+    },
+    {
+      "id": 10,
+      "obra": "Reforma da Escola Municipal",
+      "nome": "Eduardo Pereira",
+      "cpf": "258.369.147-00",
+      "email": "eduardo.pereira@example.com",
+      "tipo": "reclamacao",
+      "titulo": "Falta de ventilação nas salas",
+      "descricao": "Apesar da boa reforma, as salas continuam quentes e sem ventiladores suficientes.",
+      "dataEnvio": "2025-10-18T10:25:00",
+      "anexo": "img/escola_ventilacao.jpg"
+    },
+    {
+      "id": 11,
+      "obra": "Pavimentação da Rua das Flores",
+      "nome": "Bruna Costa",
+      "cpf": "753.159.456-00",
+      "email": "bruna.costa@example.com",
+      "tipo": "elogio",
+      "titulo": "Serviço rápido e eficiente",
+      "descricao": "A obra terminou antes do prazo e o resultado ficou ótimo. Parabéns à equipe.",
+      "dataEnvio": "2025-10-18T17:10:00",
+      "anexo": "img/rua_flores_ok2.jpg"
+    },
+    {
+      "id": 12,
+      "obra": "Ampliação do Hospital Regional",
+      "nome": "Gabriel Almeida",
+      "cpf": "456.852.159-00",
+      "email": "gabriel.almeida@example.com",
+      "tipo": "reclamacao",
+      "titulo": "Barulho durante as obras",
+      "descricao": "Os pacientes reclamam do barulho causado pelas obras de ampliação, principalmente à tarde.",
+      "dataEnvio": "2025-10-19T11:50:00",
+      "anexo": "img/ruido_hospital.jpg"
+    },
+    {
+      "id": 13,
+      "obra": "Construção da Praça Central",
+      "nome": "Isabela Martins",
+      "cpf": "147.258.369-00",
+      "email": "isabela.martins@example.com",
+      "tipo": "sugestao",
+      "titulo": "Mais áreas verdes",
+      "descricao": "Seria ótimo se fossem plantadas mais árvores próximas ao coreto da praça.",
+      "dataEnvio": "2025-10-20T09:00:00",
+      "anexo": "img/praca_verde.jpg"
+    },
+    {
+      "id": 14,
+      "obra": "Reforma da Escola Municipal",
+      "nome": "Rafael Gomes",
+      "cpf": "852.147.963-00",
+      "email": "rafael.gomes@example.com",
+      "tipo": "elogio",
+      "titulo": "Aulas retomadas com sucesso",
+      "descricao": "Os alunos voltaram a estudar e a escola está em ótimas condições. Excelente trabalho!",
+      "dataEnvio": "2025-10-20T14:15:00",
+      "anexo": "img/escola_aberta.png"
+    },
+    {
+      "id": 15,
+      "obra": "Pavimentação da Rua das Flores",
+      "nome": "Tatiane Melo",
+      "cpf": "369.147.852-00",
+      "email": "tatiane.melo@example.com",
+      "tipo": "sugestao",
+      "titulo": "Adicionar sinalização",
+      "descricao": "Faltam faixas de pedestres e placas de limite de velocidade após a pavimentação.",
+      "dataEnvio": "2025-10-21T08:45:00",
+      "anexo": "img/sinalizacao.png"
+    },
+    {
+      "id": 16,
+      "obra": "Ampliação do Hospital Regional",
+      "nome": "Henrique Souza",
+      "cpf": "951.753.654-00",
+      "email": "henrique.souza@example.com",
+      "tipo": "elogio",
+      "titulo": "Mais leitos disponíveis",
+      "descricao": "Com a ampliação, o hospital agora atende mais pacientes. Muito positivo!",
+      "dataEnvio": "2025-10-22T10:00:00",
+      "anexo": "img/hospital_leitos.jpg"
+    },
+    {
+      "id": 17,
+      "obra": "Construção da Praça Central",
+      "nome": "Sofia Duarte",
+      "cpf": "258.654.357-00",
+      "email": "sofia.duarte@example.com",
+      "tipo": "elogio",
+      "titulo": "Lindo paisagismo",
+      "descricao": "As plantas e o gramado da nova praça estão impecáveis. Parabéns à equipe de jardinagem.",
+      "dataEnvio": "2025-10-23T12:30:00",
+      "anexo": "img/praca_jardim.jpg"
+    },
+    {
+      "id": 18,
+      "obra": "Reforma da Escola Municipal",
+      "nome": "Diego Freitas",
+      "cpf": "654.357.258-00",
+      "email": "diego.freitas@example.com",
+      "tipo": "reclamacao",
+      "titulo": "Problemas na pintura",
+      "descricao": "A pintura externa começou a descascar poucos dias após a entrega da obra.",
+      "dataEnvio": "2025-10-24T09:50:00",
+      "anexo": "img/escola_pintura.jpg"
+    },
+    {
+      "id": 19,
+      "obra": "Pavimentação da Rua das Flores",
+      "nome": "Natália Campos",
+      "cpf": "357.258.654-00",
+      "email": "natalia.campos@example.com",
+      "tipo": "elogio",
+      "titulo": "Melhorou o acesso ao bairro",
+      "descricao": "Agora o trajeto até minha casa está muito mais rápido e seguro.",
+      "dataEnvio": "2025-10-25T15:10:00",
+      "anexo": "img/acesso_bairro.jpg"
+    },
+    {
+      "id": 20,
+      "obra": "Ampliação do Hospital Regional",
+      "nome": "Rodrigo Fernandes",
+      "cpf": "951.456.357-00",
+      "email": "rodrigo.fernandes@example.com",
+      "tipo": "sugestao",
+      "titulo": "Criar estacionamento coberto",
+      "descricao": "Com o aumento do fluxo, seria interessante construir um estacionamento com cobertura.",
+      "dataEnvio": "2025-10-26T10:30:00",
+      "anexo": "img/estacionamento.jpg"
     }
   ]
 }
