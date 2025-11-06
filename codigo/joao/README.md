@@ -23,7 +23,7 @@ npm install -g json-server
 
 Na pasta do projeto, execute:
 
-json-server --watch obras.json --port 3000
+    json-server --watch obras.json --port 3000
 
 > Isso cria uma API REST acessível em: [http://localhost:3000/obras]
 

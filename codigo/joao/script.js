@@ -121,26 +121,69 @@ const detalhesContent = document.getElementById('detalhesContent');
 const closeDetalhes = document.getElementById('closeDetalhes');
 
 function showDetalhesSidebar(obra) {
-  // Fecha sidebar da esquerda
   sidebar.classList.remove('open');
   sidebar.classList.add('closed');
 
-  // Monta conteúdo
   detalhesContent.innerHTML = `
     <h2>${obra.titulo}</h2>
-    <img src="${obra.anexos?.find(a => a.tipo === "imagem")?.url || './img/Logo2.png'}" alt="obra" style="width:100%; margin-bottom:1rem;" />
-    <table>
-      <tr><th>Bairro</th><td>${obra.endereco?.bairro || ''}</td></tr>
-      <tr><th>Construtora</th><td>${obra.empresaExecutora || ''}</td></tr>
-      <tr><th>Status</th><td>${obra.status || ''}</td></tr>
-      <tr><th>Valor Total</th><td>${formatCurrency(obra.valorContratado || 0)}</td></tr>
-    </table>
-    <p>${obra.descricao || ''}</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="resumo">Resumo</button>
+      <button class="tab" data-tab="timeline">Linha do tempo</button>
+      <button class="tab" data-tab="publicacoes">Publicações</button>
+    </div>
+
+    <div class="tab-content active" id="resumo">
+      <div class="detalhes-card">
+        <img src="${obra.anexos?.find(a => a.tipo === "imagem")?.url || './img/Logo2.png'}" />
+        <p><strong>Bairro:</strong> ${obra.endereco?.bairro || '-'}</p>
+        <p><strong>Construtora:</strong> ${obra.empresaExecutora || '-'}</p>
+        <p><strong>Status:</strong> ${obra.status || '-'}</p>
+        <p><strong>Valor Total:</strong> ${formatCurrency(obra.valorContratado || 0)}</p>
+        <p>${obra.descricao || ''}</p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="timeline">
+      <div class="detalhes-card">
+        <p><strong>Etapas executadas:</strong></p>
+        <ul class="timeline-list">
+          ${(obra.etapas || []).map(etapa => `<li>${etapa}</li>`).join('') || "<li>Nenhuma etapa registrada</li>"}
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-content" id="publicacoes">
+      <div class="detalhes-card">
+        ${(obra.publicacoes || []).map(pub => `
+          <div class="pub-card">
+            <img src="${pub.img || './img/placeholder.jpg'}"/>
+            <p>${pub.texto || ''}</p>
+          </div>
+        `).join('') || "<p>Nenhuma publicação registrada</p>"}
+      </div>
+    </div>
   `;
 
-  // Abre sidebar
   detalhesSidebar.classList.add('open');
+  setupTabs(); // importante
 }
+
+function setupTabs() {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".tab-content");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      contents.forEach(c => c.classList.remove("active"));
+
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+  });
+}
+
 
 // Fechar sidebar
 closeDetalhes.addEventListener('click', () => {

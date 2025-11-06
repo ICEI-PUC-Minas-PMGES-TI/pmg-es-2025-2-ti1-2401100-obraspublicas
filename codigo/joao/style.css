@@ -671,5 +671,54 @@ body.font-large span {
     padding: 8px 12px;
   }
 }
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px 10px;
+  background: #d7d7db;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.tab.active {
+  background: #27ae60;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Publicações (cards lado a lado ou vertical no mobile) */
+.pub-card {
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pub-card img {
+  width: 80px;
+  height: 80px;
+  background: #ccc;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
 
 
