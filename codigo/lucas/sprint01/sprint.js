@@ -30,18 +30,19 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     fetch("http://localhost:3000/feedbacks", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(dados)
-})
-  .then(response => response.json())
-  .then(data => {
-    alert(data.message || "Feedback enviado com sucesso!");
-    form.reset();
-  })
-  .catch(error => {
-    console.error("Erro ao enviar feedback:", error);
-    alert("Erro ao enviar feedback. Verifique a conexão com a API.");
-  });
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dados)
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert(data.message || "Feedback enviado com sucesso!");
+      // NOVO: Redireciona para a tela de feedbacks (Sprint 02)
+      window.location.href = '/lucas/sprint02/feed.html'; 
+    })
+    .catch(error => {
+      console.error("Erro ao enviar feedback:", error);
+      alert("Erro ao enviar feedback. Verifique a conexão com a API.");
+    });
   });
 });
