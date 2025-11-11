@@ -1,6 +1,7 @@
 const express = require("express");
 const fs = require("fs");
 const cors = require("cors");
+const path = require("path"); // <-- NOVO: Módulo de caminhos
 const app = express();
 
 app.use(cors());
@@ -9,67 +10,24 @@ app.use(express.json());
 const PORT = 3000;
 const DATA_PATH = "./feedback.json";
 
-function readFeedbacks() {
-  const data = fs.readFileSync(DATA_PATH, "utf8");
-  return JSON.parse(data).feedbacks;
-}
+// ************************************************
+// CORREÇÃO: Serve arquivos estáticos a partir da pasta raiz do seu projeto.
+// Isso permite que o navegador encontre arquivos como /codigo/lucas/sprint02/index.html
+app.use(express.static(path.join(__dirname, '')));
+// ************************************************
 
-function saveFeedbacks(feedbacks) {
-  fs.writeFileSync(DATA_PATH, JSON.stringify({ feedbacks }, null, 2), "utf8");
+function readFeedbacks() {
+// ... (restante da sua função readFeedbacks)
 }
+// ... (restante do código)
 
 app.get("/", (req, res) => {
-  res.send("API de Feedbacks - Obra Prima");
+  // Redireciona a rota raiz para sua tela de cadastro
+  res.redirect("/codigo/lucas/sprint02/index.html"); 
 });
 
-app.get("/feedbacks", (req, res) => {
-  const feedbacks = readFeedbacks();
-  res.json(feedbacks);
-});
-
-app.get("/feedbacks/:id", (req, res) => {
-  const feedbacks = readFeedbacks();
-  const feedback = feedbacks.find(f => f.id === parseInt(req.params.id));
-  if (!feedback) {
-    return res.status(404).json({ error: "Feedback não encontrado" });
-  }
-  res.json(feedback);
-});
-
-app.post("/feedbacks", (req, res) => {
-  const feedbacks = readFeedbacks();
-
-  const novoFeedback = {
-    id: feedbacks.length > 0 ? feedbacks[feedbacks.length - 1].id + 1 : 1,
-    obra: req.body.obra,
-    nome: req.body.nome,
-    cpf: req.body.cpf,
-    email: req.body.email,
-    tipo: req.body.tipo,
-    titulo: req.body.titulo,
-    descricao: req.body.descricao,
-    dataEnvio: new Date().toISOString(),
-    anexo: req.body.anexo || ""
-  };
-
-  feedbacks.push(novoFeedback);
-  saveFeedbacks(feedbacks);
-  res.status(201).json({ message: "Feedback cadastrado com sucesso!", novoFeedback });
-});
-
-app.delete("/feedbacks/:id", (req, res) => {
-  let feedbacks = readFeedbacks();
-  const id = parseInt(req.params.id);
-  const novoArray = feedbacks.filter(f => f.id !== id);
-
-  if (novoArray.length === feedbacks.length) {
-    return res.status(404).json({ error: "Feedback não encontrado" });
-  }
-
-  saveFeedbacks(novoArray);
-  res.json({ message: "Feedback removido com sucesso!" });
-});
+// ... (restante das suas rotas de API: /feedbacks, /feedbacks/:id, etc.)
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });

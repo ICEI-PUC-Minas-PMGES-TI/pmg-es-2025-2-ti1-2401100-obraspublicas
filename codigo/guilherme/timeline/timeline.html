@@ -9,12 +9,13 @@
 <body>
   <!-- TOPO -->
   <header class="topbar">
-    <a href="#">
+    <!-- se não tiver uma página inicial, use javascript:void(0) ou previna o default no clique -->
+    <a href="/" aria-label="Home">
       <div class="logo"><img src="img/Logo.png" alt="Logo Obra Prima" /></div>
     </a>
     <div class="title">Obra Prima</div>
     <div class="right">
-      <button class="bell" title="Notificações"><img src="img/Bell.png" alt="Sininho" /></button>
+      <button type="button" class="bell" title="Notificações"><img src="img/Bell.png" alt="Sininho" /></button>
       <div class="user">
         <div class="avatar" aria-hidden="true"></div>
         <span class="username">Fulano Silva</span>
@@ -53,8 +54,9 @@
           <input type="date" id="marcoData">
         </div>
         <div class="form-actions">
-          <button class="btn btn-primary" id="adicionarMarcoBtn">Adicionar</button>
-          <button class="btn btn-ghost" id="limparFormBtn">Limpar</button>
+          <!-- atenção: type="button" evita comportamento de submit -->
+          <button type="button" class="btn btn-primary" id="adicionarMarcoBtn">Adicionar</button>
+          <button type="button" class="btn btn-ghost" id="limparFormBtn">Limpar</button>
         </div>
       </div>
     </div>
@@ -88,7 +90,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <h3>Editar Marco</h3>
-        <button class="modal-close" id="modalClose">&times;</button>
+        <!-- fechar também precisa type="button" -->
+        <button type="button" class="modal-close" id="modalClose">&times;</button>
       </div>
       <div class="form-group">
         <label for="editTitulo">Título</label>
@@ -107,8 +110,8 @@
         <input type="date" id="editData">
       </div>
       <div class="form-actions">
-        <button class="btn btn-primary" id="salvarEdicaoBtn">Salvar</button>
-        <button class="btn btn-ghost" id="cancelarEdicaoBtn">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="salvarEdicaoBtn">Salvar</button>
+        <button type="button" class="btn btn-ghost" id="cancelarEdicaoBtn">Cancelar</button>
       </div>
     </div>
   </div>
