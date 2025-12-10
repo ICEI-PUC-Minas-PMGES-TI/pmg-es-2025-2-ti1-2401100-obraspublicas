@@ -1,4 +1,4 @@
-const API = "http://localhost:3000";
+const API = "https://projeto-obra-prima.onrender.com";
 
 // =========================================
 // VERIFICAÇÃO DE LOGIN
@@ -23,11 +23,8 @@ function verificarLogin() {
     
     if (heroButtons) {
       heroButtons.innerHTML = `
-        <button class="btn btn-primary" onclick="window.location.href='main.html'">
+        <button class="btn btn-primary" onclick="window.location.href='/modulos/main.html'">
           <i class="fa fa-road"></i> Ver Todas as Obras
-        </button>
-        <button class="btn btn-ghost" onclick="window.location.href='feedback.html'">
-          <i class="fa fa-message"></i> Enviar Feedback
         </button>
       `;
     }
@@ -40,7 +37,7 @@ function verificarLogin() {
     
     if (heroButtons) {
       heroButtons.innerHTML = `
-        <button class="btn btn-primary" onclick="window.location.href='login.html'">
+        <button class="btn btn-primary" onclick="window.location.href='modulos/login.html'">
           <i class="fa fa-user"></i> Fazer Login para Acessar
         </button>
       `;
@@ -156,10 +153,10 @@ function gerarObrasDestaque(obras) {
     `;
 
     card.addEventListener('click', () => {
-      if (window.location.pathname.includes('main.html')) {
+      if (window.location.pathname.includes('modulos/main.html')) {
         alert(`Detalhes da obra: ${titulo}\nImplemente a visualização de detalhes aqui.`);
       } else {
-        window.location.href = `main.html`;
+        window.location.href = `modulos/main.html`;
       }
     });
 

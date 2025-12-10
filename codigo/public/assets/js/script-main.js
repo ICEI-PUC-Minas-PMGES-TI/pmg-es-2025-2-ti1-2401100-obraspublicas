@@ -2,8 +2,8 @@
 // CONFIGURAÇÕES E VARIÁVEIS GLOBAIS
 // ======================================================
 
-const API = "http://localhost:3000/obras";
-const USUARIOS_API = "http://localhost:3000/usuarios";
+const API = "https://projeto-obra-prima.onrender.com/obras";
+const USUARIOS_API = "https://projeto-obra-prima.onrender.com/usuarios";
 
 const sidebar = document.querySelector('.sidebar');
 const toggleSidebarBtn = document.getElementById('toggleSidebar');
@@ -33,7 +33,7 @@ let obrasData = [];
 let mapInstance = null;
 let markersLayer = null;
 
-const placeholder = '/codigo/public/assets/images/Logo2.png';
+const placeholder = 'assets/images/Logo2.png';
 const formatCurrency = (value) => 'R$ ' + Number(value).toLocaleString('pt-BR');
 const normalize = (str) =>
   str ? str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim().toLowerCase() : '';
@@ -61,12 +61,12 @@ document.addEventListener('click', (e) => {
 });
 
 document.getElementById('homeBtn').addEventListener('click', () => {
-  window.location.href = 'index.html';
+  window.location.href = '/index.html';
 });
 
 document.getElementById('logoutBtn').addEventListener('click', () => {
   localStorage.removeItem('usuarioLogado');
-  window.location.href = 'login.html';
+  window.location.href = '/modulos/login.html';
 });
 
 toggleFontBtn.addEventListener('click', () => {
@@ -735,7 +735,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
 
   if (!usuario || !usuario.dadosPessoais || !usuario.dadosPessoais.nomeCompleto) {
-    window.location.href = "login.html";
+    window.location.href = "/modulos/login.html";
     return;
   }
 
@@ -761,7 +761,7 @@ window.addEventListener("DOMContentLoaded", () => {
       gestorBtn.style.fontWeight = "bold";
 
       gestorBtn.addEventListener("click", () => {
-        window.location.href = "/codigo/public/modulos/editorObras.html";
+        window.location.href = "/modulos/editorObras.html";
       });
 
       rightDiv.appendChild(gestorBtn);

@@ -1,4 +1,4 @@
-const API = "http://localhost:3000/obras";
+const API = "https://projeto-obra-prima.onrender.com/api/obras";
 
 let obras = [];
 
@@ -80,7 +80,7 @@ function exibirObras(lista) {
       : "—";
 
     card.innerHTML = `
-      <img class="card-img" src="../assets/images/Logo2.png" alt="Imagem da obra">
+      <img class="card-img" src="/assets/images/Logo2.png" alt="Imagem da obra">
 
       <h3>${obra.titulo || "(Sem título)"}</h3>
 
