@@ -70,7 +70,6 @@ Empresas e órgãos públicos responsáveis pelas obras, que terão um canal mod
 
 ![highlight](images/highlights.png)
 
-
 ## Etapa de Definição
 
 ### Personas
@@ -135,10 +134,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos não Funcionais
 
-| ID      | Descrição do Requisito                                                                                              | Prioridade |
-| ------- | ------------------------------------------------------------------------------------------------------------------- | ---------- |
-| RNF-001 | O sistema deve estar disponível 24 horas por dia, 7 dias por semana.                                                | ALTA       |
-| RNF-002 | O site deve ser responsivo, permitindo acesso adequado tanto em computadores quanto em dispositivos móveis.         | ALTA       |
+| ID      | Descrição do Requisito                                                                                      | Prioridade |
+| ------- | ----------------------------------------------------------------------------------------------------------- | ---------- |
+| RNF-001 | O sistema deve estar disponível 24 horas por dia, 7 dias por semana.                                        | ALTA       |
+| RNF-002 | O site deve ser responsivo, permitindo acesso adequado tanto em computadores quanto em dispositivos móveis. | ALTA       |
 
 ## Projeto de Interface
 
@@ -255,70 +254,154 @@ O vídeo a seguir traz uma apresentação do problema que a equipe está tratand
 
 Esta seção apresenta as funcionalidades da solução.Info
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 1 - Cadastro de Cidadão
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite a inclusão, leitura de usuarios para o sistema
 
-- **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+- **Estrutura de dados:** [Cadastro de Cidadãos](#ti_ed_Cidadao)
 - **Instruções de acesso:**
   - Abra o site e efetue o login
-  - Acesse o menu principal e escolha a opção Cadastros
-  - Em seguida, escolha a opção Contatos
+  - Clique em loguin
+  - Em seguida clique e criar novo usuario como cidadão
 - **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade](images/Cadastro%20cidadão-atual.png)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+##### Funcionalidade 2 - Cadastro de Feedback
+
+Permite a inclusão de um feedback na obra e também a leitura do mesmo.
+
+- **Estrutura de dados:** [FeedBack](#ti_ed_Feedback)
+- **Instruções de acesso:**
+  - Abra o site e efetue o login
+  - Clique na Obra escolhida
+  - Vá até feedback nos detalhes da obra
+  - E clique para adicionar um feedback
+- **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/tela%20feedback.png)
+
+##### Funcionalidade 2 - Cadastro de Feedback
+
+Permite a inclusão de um feedback na obra e também a leitura do mesmo.
+
+- **Estrutura de dados:** [FeedBack](#ti_ed_Feedback)
+- **Instruções de acesso:**
+  - Abra o site e efetue o login
+  - Clique na Obra escolhida
+  - Vá até feedback nos detalhes da obra
+  - E clique para adicionar um feedback
+- **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/tela%20feedback.png)
+
+##### Funcionalidade 3 - Cadastro de obra
+
+O gestor consegue visualizar as obras já criadas, editar as obras, exluir e também cadastrar novas obras no sistema
+
+- **Estrutura de dados:** [FeedBack](#ti_ed_Feedback)
+- **Instruções de acesso:**
+  - Abra o site e efetue o login
+  - Clique na opção de painel do gestor
+  - Aparecerá todas as informações de cada obra
+- **Tela da funcionalidade**:
+
+![Tela de Funcionalidade](images/cadastro%20de%20obra.png)
 
 ## Estruturas de Dados
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
 
-##### Estrutura de Dados - Contatos ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Obras
 
 Contatos da aplicação
 
 ```json
 {
-  "id": 1,
-  "nome": "Leanne Graham",
-  "cidade": "Belo Horizonte",
-  "categoria": "amigos",
-  "email": "Sincere@april.biz",
-  "telefone": "1-770-736-8031",
-  "website": "hildegard.org"
-}
+      "id": "1",
+      "titulo": "Reforma da Praça Central",
+      "descricao": "Projeto de reforma da praça central visando melhorias estruturais e urbanísticas na região de Barreiro.",
+      "valorContratado": 5610099,
+      "status": "Paralisada",
+      "dataInicio": "2024-05-27",
+      "previsaoTermino": "2025-04-18",
+      "orgaoResponsavel": "Secretaria de Desenvolvimento",
+      "empresaExecutora": "Construmax Engenharia",
+      "latitude": -19.9822,
+      "longitude": -44.0154,
+      "endereco": {
+        "logradouro": "Rua Principal",
+        "numero": "329",
+        "bairro": "Barreiro",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "33675-748"
+      }
 ```
 
-##### Estrutura de Dados - Usuários ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Usuários
 
 Registro dos usuários do sistema utilizados para login e para o perfil do sistema
 
 ```json
 {
-  "id": "eed55b91-45be-4f2c-81bc-7686135503f9",
-  "email": "admin@abc.com",
-  "id": "eed55b91-45be-4f2c-81bc-7686135503f9",
-  "login": "admin",
-  "nome": "Administrador do Sistema",
-  "senha": "123"
-}
+      "id": "b01f",
+      "gestor": false,
+      "dadosPessoais": {
+        "nomeCompleto": "Gustavo Henrique de Lima",
+        "cpf": "178.197.816-61",
+        "dataNascimento": "2004-08-23",
+        "genero": null
+      },
+      "contato": {
+        "email": "gustavohgordiano@gmail.com",
+        "telefone": "(31) 98603-7703"
+      },
+      "endereco": {
+        "cep": "31810-440",
+        "logradouro": "Rua cinco de Julho",
+        "numero": "115",
+        "complemento": "",
+        "bairro": "Primeiro de Maio",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      },
+      "seguranca": {
+        "password": "gustavo21hl"
+      }
 ```
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> - [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> - [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+##### Estrutura de Dados - Usuários
+
+Registro dos usuários do sistema utilizados para login e para o perfil do sistema
+
+```json
+{
+      "id": "b01f",
+      "gestor": false,
+      "dadosPessoais": {
+        "nomeCompleto": "Gustavo Henrique de Lima",
+        "cpf": "178.197.816-61",
+        "dataNascimento": "2004-08-23",
+        "genero": null
+      },
+      "contato": {
+        "email": "gustavohgordiano@gmail.com",
+        "telefone": "(31) 98603-7703"
+      },
+      "endereco": {
+        "cep": "31810-440",
+        "logradouro": "Rua cinco de Julho",
+        "numero": "115",
+        "complemento": "",
+        "bairro": "Primeiro de Maio",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+      },
+      "seguranca": {
+        "password": "gustavo21hl"
+      }
+```
 
 ## Módulos e APIs
 
